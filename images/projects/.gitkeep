@@ -1,0 +1,7 @@
+# Project Images
+
+Add optimized project screenshots here.
+
+Each project in `/data/projects.json` should have a corresponding image.
+
+Example: If project ID is "tiny-doodle", add `tiny-doodle.webp` here.

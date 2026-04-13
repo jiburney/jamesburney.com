@@ -1,0 +1,7 @@
+# Travel Images
+
+Add optimized travel photos here.
+
+Each trip in `/data/travels.json` needs:
+- One main image (e.g., `iceland-main.webp`)
+- 3-5 gallery images (e.g., `iceland-1.webp`, `iceland-2.webp`, etc.)

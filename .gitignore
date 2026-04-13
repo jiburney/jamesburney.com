@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Log files
+*.log
+npm-debug.log*
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# SSL certificates (for local dev)
+*.pem
+*.key
+*.crt
+
+# Large media files (optimize before committing)
+# Uncomment if you want to ignore unoptimized images
+# images/originals/
+
+# Backup files
+*.bak
+*.backup
+
+# OS files
+Thumbs.db
+ehthumbs.db
+Desktop.ini

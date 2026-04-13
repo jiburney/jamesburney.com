@@ -1,0 +1,298 @@
+/* ==========================================================================
+   Theme Definitions - Dark Mode (Default) & Light Mode
+   ========================================================================== */
+
+/* ==========================================================================
+   Dark Mode (Default)
+   ========================================================================== */
+
+:root,
+[data-theme="dark"] {
+  /* Backgrounds */
+  --bg-primary: #0d1117;
+  --bg-secondary: #161b22;
+  --bg-tertiary: #21262d;
+
+  /* Text Colors */
+  --text-primary: #c9d1d9;
+  --text-secondary: #8b949e;
+  --text-muted: #6e7681;
+
+  /* Accent Colors */
+  --accent-green: #3fb950;
+  --accent-green-hover: #2ea043;
+  --accent-green-light: rgba(63, 185, 80, 0.15);
+  --accent-blue: #58a6ff;
+  --accent-blue-hover: #388bfd;
+  --accent-blue-light: rgba(88, 166, 255, 0.15);
+
+  /* UI Colors */
+  --border-color: #30363d;
+  --border-color-light: #21262d;
+  --divider-color: #21262d;
+
+  /* Status Colors */
+  --success-color: #3fb950;
+  --warning-color: #d29922;
+  --error-color: #f85149;
+  --info-color: #58a6ff;
+
+  /* Overlay */
+  --overlay-bg: rgba(0, 0, 0, 0.8);
+
+  /* Shadows (darker for dark mode) */
+  --shadow-color: rgba(0, 0, 0, 0.4);
+}
+
+/* ==========================================================================
+   Light Mode
+   ========================================================================== */
+
+[data-theme="light"] {
+  /* Backgrounds */
+  --bg-primary: #f6f8fa;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #eaeef2;
+
+  /* Text Colors */
+  --text-primary: #1f2328;
+  --text-secondary: #57606a;
+  --text-muted: #8b949e;
+
+  /* Accent Colors */
+  --accent-green: #1a7f37;
+  --accent-green-hover: #116329;
+  --accent-green-light: rgba(26, 127, 55, 0.1);
+  --accent-blue: #0969da;
+  --accent-blue-hover: #0550ae;
+  --accent-blue-light: rgba(9, 105, 218, 0.1);
+
+  /* UI Colors */
+  --border-color: #d0d7de;
+  --border-color-light: #eaeef2;
+  --divider-color: #d8dee4;
+
+  /* Status Colors */
+  --success-color: #1a7f37;
+  --warning-color: #9a6700;
+  --error-color: #cf222e;
+  --info-color: #0969da;
+
+  /* Overlay */
+  --overlay-bg: rgba(0, 0, 0, 0.5);
+
+  /* Shadows (lighter for light mode) */
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================================================
+   Theme Transition
+   ========================================================================== */
+
+html {
+  color-scheme: dark;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+}
+
+/* Smooth transitions between themes */
+body,
+.header,
+.footer,
+.card,
+.btn,
+.nav__link,
+.theme-toggle {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* ==========================================================================
+   Theme Toggle Icons
+   ========================================================================== */
+
+/* Sun icon (shown in dark mode, click to switch to light) */
+.theme-toggle__sun {
+  display: block;
+}
+
+.theme-toggle__moon {
+  display: none;
+}
+
+/* Moon icon (shown in light mode, click to switch to dark) */
+[data-theme="light"] .theme-toggle__sun {
+  display: none;
+}
+
+[data-theme="light"] .theme-toggle__moon {
+  display: block;
+}
+
+/* ==========================================================================
+   Theme-specific Adjustments
+   ========================================================================== */
+
+/* Adjust card shadows per theme */
+[data-theme="dark"] .card {
+  box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+[data-theme="light"] .card {
+  box-shadow: 0 1px 3px var(--shadow-color);
+}
+
+[data-theme="dark"] .card:hover {
+  box-shadow: 0 10px 20px var(--shadow-color);
+}
+
+[data-theme="light"] .card:hover {
+  box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+/* Header background with subtle transparency */
+[data-theme="dark"] .header {
+  background-color: rgba(13, 17, 23, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+[data-theme="light"] .header {
+  background-color: rgba(246, 248, 250, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+/* Code/monospace elements */
+code, pre {
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+code {
+  padding: 0.2em 0.4em;
+  font-size: 85%;
+}
+
+pre {
+  padding: var(--spacing-md);
+  overflow-x: auto;
+}
+
+pre code {
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+/* ==========================================================================
+   Elevation Profile Theme Colors
+   ========================================================================== */
+
+.at-profile__path {
+  stroke: var(--accent-green);
+  fill: none;
+  stroke-width: 2;
+}
+
+.at-profile__fill {
+  fill: var(--accent-green-light);
+}
+
+.at-profile__marker {
+  fill: var(--accent-blue);
+}
+
+.at-profile__label {
+  fill: var(--text-secondary);
+  font-size: 10px;
+}
+
+/* ==========================================================================
+   Map Theme Overrides (Leaflet)
+   ========================================================================== */
+
+/* Custom map container styling */
+.map-container {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+/* Style map attribution */
+.leaflet-control-attribution {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-muted) !important;
+}
+
+.leaflet-control-attribution a {
+  color: var(--accent-blue) !important;
+}
+
+/* Custom popup styling */
+.leaflet-popup-content-wrapper {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.leaflet-popup-tip {
+  background-color: var(--bg-secondary);
+}
+
+/* ==========================================================================
+   Selection Colors
+   ========================================================================== */
+
+::selection {
+  background-color: var(--accent-green-light);
+  color: var(--text-primary);
+}
+
+[data-theme="light"] ::selection {
+  background-color: var(--accent-blue-light);
+}
+
+/* ==========================================================================
+   Focus States
+   ========================================================================== */
+
+:focus-visible {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   Scrollbar Styling
+   ========================================================================== */
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-color) var(--bg-primary);
+}

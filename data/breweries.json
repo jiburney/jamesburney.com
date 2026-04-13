@@ -1,0 +1,108 @@
+{
+  "total_count": 487,
+  "states_visited": 23,
+  "countries_visited": 4,
+  "breweries": [
+    {
+      "name": "Russian River Brewing",
+      "lat": 38.4404,
+      "lng": -122.7141,
+      "city": "Santa Rosa",
+      "state": "CA",
+      "country": "USA",
+      "date_visited": "2019-08",
+      "notes": "Finally got Pliny the Elder at the source"
+    },
+    {
+      "name": "Hill Farmstead Brewery",
+      "lat": 44.6815,
+      "lng": -72.2987,
+      "city": "Greensboro",
+      "state": "VT",
+      "country": "USA",
+      "date_visited": "2018-10",
+      "notes": "Worth the drive through backroads Vermont"
+    },
+    {
+      "name": "Allagash Brewing Company",
+      "lat": 43.6938,
+      "lng": -70.3040,
+      "city": "Portland",
+      "state": "ME",
+      "country": "USA",
+      "date_visited": "2018-10",
+      "notes": "White is a perfect gateway Belgian"
+    },
+    {
+      "name": "Trillium Brewing Company",
+      "lat": 42.3489,
+      "lng": -71.0334,
+      "city": "Boston",
+      "state": "MA",
+      "country": "USA",
+      "date_visited": "2019-05",
+      "notes": "New England IPA heaven"
+    },
+    {
+      "name": "Tree House Brewing Company",
+      "lat": 42.2642,
+      "lng": -72.3139,
+      "city": "Charlton",
+      "state": "MA",
+      "country": "USA",
+      "date_visited": "2019-05",
+      "notes": "Julius is worth the hype"
+    },
+    {
+      "name": "The Veil Brewing Co.",
+      "lat": 37.5335,
+      "lng": -77.4390,
+      "city": "Richmond",
+      "state": "VA",
+      "country": "USA",
+      "date_visited": "2020-02",
+      "notes": "Local favorite, great hazy IPAs"
+    },
+    {
+      "name": "Hardywood Park Craft Brewery",
+      "lat": 37.5631,
+      "lng": -77.4679,
+      "city": "Richmond",
+      "state": "VA",
+      "country": "USA",
+      "date_visited": "2020-01",
+      "notes": "Gingerbread Stout is a holiday tradition"
+    },
+    {
+      "name": "Cantillon Brewery",
+      "lat": 50.8440,
+      "lng": 4.3360,
+      "city": "Brussels",
+      "state": null,
+      "country": "Belgium",
+      "date_visited": "2017-09",
+      "notes": "Lambic pilgrimage complete"
+    },
+    {
+      "name": "Westvleteren Brewery",
+      "lat": 50.8927,
+      "lng": 2.7192,
+      "city": "Vleteren",
+      "state": null,
+      "country": "Belgium",
+      "date_visited": "2017-09",
+      "notes": "Monk-brewed perfection"
+    },
+    {
+      "name": "Sierra Nevada Brewing",
+      "lat": 39.7239,
+      "lng": -121.8148,
+      "city": "Chico",
+      "state": "CA",
+      "country": "USA",
+      "date_visited": "2019-08",
+      "notes": "Pale Ale changed American beer"
+    }
+  ],
+  "instructions": "To add your brewery data: Export from Google Maps Timeline as JSON, then convert to this format. Each brewery needs at minimum: name, lat, lng, city, state/country, and date_visited (YYYY-MM format)."
+}

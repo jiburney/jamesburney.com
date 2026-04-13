@@ -1,0 +1,52 @@
+{
+  "posts": [],
+  "categories": [
+    "career",
+    "climate-tech",
+    "outdoor",
+    "geography",
+    "product"
+  ],
+  "instructions": {
+    "adding_posts": "To add a new post, add an entry to this array and create a corresponding HTML or Markdown file in /posts/",
+    "post_format": {
+      "id": "unique-slug-for-url",
+      "title": "Post Title",
+      "date": "2025-01-15",
+      "category": "career",
+      "description": "Brief description for listing pages and SEO",
+      "featured": false,
+      "draft": false
+    },
+    "file_naming": "Posts should be named: /posts/YYYY-MM-DD-slug.html or .md"
+  },
+  "placeholder_posts": [
+    {
+      "id": "why-climate-tech",
+      "title": "Why I'm Pivoting to Climate Tech",
+      "date": "2025-02-01",
+      "category": "climate-tech",
+      "description": "The journey from fintech to climate, and why product skills matter in this space.",
+      "featured": true,
+      "draft": true
+    },
+    {
+      "id": "appalachian-trail-lessons",
+      "title": "What 2,190 Miles Taught Me About Product Management",
+      "date": "2025-02-15",
+      "category": "outdoor",
+      "description": "Surprisingly relevant lessons from thru-hiking for building digital products.",
+      "featured": false,
+      "draft": true
+    },
+    {
+      "id": "sustainable-web-design",
+      "title": "Building a Sustainable Personal Website",
+      "date": "2025-03-01",
+      "category": "product",
+      "description": "Technical decisions, tradeoffs, and what I learned building this site.",
+      "featured": false,
+      "draft": true
+    }
+  ]
+}

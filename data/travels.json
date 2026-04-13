@@ -1,0 +1,58 @@
+{
+  "trips": [
+    {
+      "id": "iceland",
+      "title": "Fire and Ice: Iceland's Golden Circle",
+      "location": {
+        "name": "Thingvellir National Park, Iceland",
+        "lat": 64.2559,
+        "lng": -21.1290
+      },
+      "date": "June 2023",
+      "main_image": "/images/travels/iceland-main.webp",
+      "gallery": [
+        "/images/travels/iceland-1.webp",
+        "/images/travels/iceland-2.webp",
+        "/images/travels/iceland-3.webp"
+      ],
+      "description": "Iceland in summer is surreal—endless daylight, landscapes that look like another planet, and waterfalls around every corner. The Golden Circle route takes you through geysers, tectonic plates, and some of the most photographed scenery on Earth. But the real magic was the smaller moments: roadside hot springs, unexpected sheep encounters, and the strange feeling of the sun refusing to set.",
+      "highlight": "Standing in the rift valley at Thingvellir, literally between the North American and Eurasian tectonic plates. It's one of the few places on Earth where you can see the continental divide above water."
+    },
+    {
+      "id": "japan",
+      "title": "Cherry Blossoms and Bullet Trains",
+      "location": {
+        "name": "Fushimi Inari Shrine, Kyoto, Japan",
+        "lat": 34.9671,
+        "lng": 135.7727
+      },
+      "date": "April 2022",
+      "main_image": "/images/travels/japan-main.webp",
+      "gallery": [
+        "/images/travels/japan-1.webp",
+        "/images/travels/japan-2.webp",
+        "/images/travels/japan-3.webp"
+      ],
+      "description": "Japan during cherry blossom season is both everything you'd expect and completely surprising. Yes, the temples are stunning and the food is incredible. But what struck me most was the intentionality of everything—from how a bowl of ramen is presented to how a train station is designed. There's a lesson in product design hiding in every corner of Japanese culture.",
+      "highlight": "Arriving at Fushimi Inari at 5 AM to have the famous torii gates almost entirely to ourselves. The early morning light filtering through thousands of vermillion gates was worth every minute of jet lag."
+    },
+    {
+      "id": "patagonia",
+      "title": "At the End of the World",
+      "location": {
+        "name": "Torres del Paine, Chile",
+        "lat": -50.9423,
+        "lng": -73.4068
+      },
+      "date": "February 2020",
+      "main_image": "/images/travels/patagonia-main.webp",
+      "gallery": [
+        "/images/travels/patagonia-1.webp",
+        "/images/travels/patagonia-2.webp",
+        "/images/travels/patagonia-3.webp"
+      ],
+      "description": "Patagonia is where big landscapes get even bigger. The wind is relentless, the glaciers are humbling, and the distance from everything familiar puts your life in perspective. This was a pre-pandemic trip that feels like it was from another era. Four days of trekking through some of the most dramatic scenery on Earth, ending each night exhausted and grateful.",
+      "highlight": "Watching a piece of glacier calve into Lago Grey, the sound of cracking ice echoing across the water. A visceral reminder of climate change that stays with you long after you leave."
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "site": {
+    "title": "James Burney",
+    "tagline": "Product Manager | Climate Tech | Outdoor Enthusiast",
+    "description": "Product manager building climate solutions. Former PM at The Motley Fool, Zillow, and Merkle. Appalachian Trail thru-hiker and geography enthusiast.",
+    "url": "https://jamesburney.com",
+    "author": "James Burney",
+    "og_image": "/images/og-image.jpg",
+    "twitter_handle": "@jamesburney"
+  },
+  "pages": {
+    "home": {
+      "title": "James Burney | Product Manager & Climate Tech Enthusiast",
+      "description": "Product manager transitioning to climate tech. Building sustainable solutions and exploring the world.",
+      "keywords": "product manager, climate tech, sustainability, Appalachian Trail"
+    },
+    "experience": {
+      "title": "Experience | James Burney",
+      "description": "Product management experience at The Motley Fool, Zillow Group, and Merkle. Skills in SEO, data analysis, and stakeholder management.",
+      "keywords": "product manager resume, PM experience, climate tech transition"
+    },
+    "projects": {
+      "title": "Projects | James Burney",
+      "description": "Portfolio of technical projects including Tiny Doodle, Carbon Tracker, and Wild Blue Travel growth work.",
+      "keywords": "product portfolio, climate tech projects, technical SEO"
+    },
+    "wanderings": {
+      "title": "Wanderings | James Burney",
+      "description": "Travel photography and stories from around the world. Interactive photo exploration.",
+      "keywords": "travel photography, geography, world explorer"
+    },
+    "hobbies": {
+      "title": "Hobbies & Interests | James Burney",
+      "description": "Appalachian Trail thru-hiker, Cicerone-certified beer expert, geography and maps enthusiast.",
+      "keywords": "Appalachian Trail, Cicerone, craft beer, geography"
+    },
+    "sustainability": {
+      "title": "Sustainable Web Design | James Burney",
+      "description": "How this website was built with sustainability in mind. Technical decisions and environmental impact.",
+      "keywords": "sustainable web design, green web, eco-friendly website"
+    }
+  }
+}

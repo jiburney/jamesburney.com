@@ -1,0 +1,13 @@
+# Miscellaneous Images
+
+Add site-wide images here:
+
+Required:
+- `favicon.svg` - Site favicon
+- `apple-touch-icon.png` - iOS home screen icon (180x180px)
+- `og-image.jpg` - Default Open Graph image (1200x630px)
+- `twitter-image.jpg` - Twitter card image (1200x675px)
+
+Optional:
+- `logo.svg` - Site logo
+- `avatar.jpg` - Personal photo for about section

@@ -1,0 +1,162 @@
+{
+  "experience": [
+    {
+      "id": "consulting",
+      "title": "Web & Product Consultant",
+      "company": "Independent Consulting",
+      "location": "Virginia",
+      "start_date": "2024-01",
+      "end_date": null,
+      "current": true,
+      "description": "Building AI-powered products and providing product strategy consulting for small businesses.",
+      "highlights": [
+        "Build AI-powered products using Claude Code, including an interactive map-based guessing game (What Mile?), a creative drawing app (Tiny Doodle), and a carbon-tracking browser widget (Carbon Tracker)",
+        "Provide product strategy, web development, and UX consulting for small businesses, delivering UX/UI redesigns and technical improvements"
+      ],
+      "skills": ["Claude Code", "React", "Product Strategy", "UX Consulting", "Web Development"]
+    },
+    {
+      "id": "at-thru-hike",
+      "title": "Career Break — Appalachian Trail Thru-hike",
+      "company": "",
+      "location": "",
+      "start_date": "2023-01",
+      "end_date": "2023-12",
+      "current": false,
+      "description": "Completed 2,190-mile thru-hike of the Appalachian Trail, demonstrating exceptional perseverance, planning, and long-term goal achievement in challenging, resource-constrained conditions.",
+      "highlights": [],
+      "skills": []
+    },
+    {
+      "id": "motley-fool-lead",
+      "title": "Product Lead",
+      "company": "The Motley Fool",
+      "location": "Alexandria, VA",
+      "start_date": "2020-10",
+      "end_date": "2022-07",
+      "current": false,
+      "description": "Led product development for new customer acquisition product and unified member dashboard.",
+      "highlights": [
+        "Led development of new customer acquisition product from discovery to pre-launch, conducting user research, creating interactive demos that secured executive approval, and achieving positive early user feedback",
+        "Launched a unified member dashboard serving millions of users, consolidating multiple product experiences into a single interface that improved engagement and navigation",
+        "Partnered with engineering teams to define technical requirements and product specifications for a new subscription product, writing detailed epics and user stories to guide development",
+        "Collaborated with CEO, executive team, designers, and engineers to introduce new product development methodology, facilitating workshops that improved cross-functional alignment"
+      ],
+      "skills": ["Product Strategy", "User Research", "Stakeholder Management", "Cross-functional Leadership"]
+    },
+    {
+      "id": "motley-fool-po",
+      "title": "Product Owner",
+      "company": "The Motley Fool",
+      "location": "Alexandria, VA",
+      "start_date": "2019-10",
+      "end_date": "2020-10",
+      "current": false,
+      "description": "Owned product roadmap and strategy for fool.com with millions of monthly visitors.",
+      "highlights": [
+        "Owned product roadmap and strategy for fool.com (millions of monthly visitors), driving 20%+ improvement in engagement metrics through data-driven prioritization",
+        "Used SQL and analytics platforms to independently query data, analyze user behavior patterns, and inform feature development and roadmap decisions",
+        "Facilitated cross-functional discovery sessions with engineering, design, and marketing to identify user pain points and align on product priorities",
+        "Shipped multiple features balancing user needs, technical complexity, and business objectives"
+      ],
+      "skills": ["Product Ownership", "SQL", "Data Analysis", "Agile/Scrum", "A/B Testing"]
+    },
+    {
+      "id": "motley-fool-seo",
+      "title": "Technical SEO Strategist",
+      "company": "The Motley Fool",
+      "location": "Alexandria, VA",
+      "start_date": "2019-07",
+      "end_date": "2019-10",
+      "current": false,
+      "description": "Developed technical SEO strategy and bridged communication between technical and non-technical teams.",
+      "highlights": [
+        "Developed technical strategy presentation for President and CTO, translating complex technical concepts for executive audience and facilitating company-wide workshops",
+        "Bridged communication between technical and non-technical teams to drive adoption of best practices across the organization"
+      ],
+      "skills": ["Technical SEO", "Executive Communication", "Technical Strategy"]
+    },
+    {
+      "id": "cvent",
+      "title": "SEO Lead",
+      "company": "Cvent",
+      "location": "Tysons, VA",
+      "start_date": "2019-03",
+      "end_date": "2019-07",
+      "current": false,
+      "description": "Led global SEO strategy across engineering, product, and marketing teams.",
+      "highlights": [
+        "Led global SEO strategy, advising executives on technical recommendations and building implementation roadmaps across engineering, product, and marketing teams"
+      ],
+      "skills": ["SEO Strategy", "Enterprise SEO", "Cross-functional Leadership"]
+    },
+    {
+      "id": "zillow",
+      "title": "Product Manager, SEO",
+      "company": "Zillow Group (HotPads)",
+      "location": "San Francisco, CA",
+      "start_date": "2016-12",
+      "end_date": "2018-08",
+      "current": false,
+      "description": "Led SEO product development for HotPads, a consumer rental product within the Zillow Group portfolio.",
+      "highlights": [
+        "Led development and launch of SEO Links API, collaborating closely with engineering to develop API specifications that reduced front-end server calls by ~10%",
+        "Drove consolidation of list/map search experiences, using SQL and data analysis to identify issues and partnering with engineers to implement a solution that improved user experience and increased traffic",
+        "Diagnosed complex traffic decline requiring long-term experience improvements rather than quick fixes, demonstrating sound product judgment under pressure",
+        "Collaborated with engineering throughout the development lifecycle, participating in sprint planning, technical design discussions, and launch coordination"
+      ],
+      "skills": ["Product Management", "SEO", "SQL", "API Development", "Data Analysis"]
+    },
+    {
+      "id": "merkle",
+      "title": "Sr SEO Account Manager",
+      "company": "Merkle",
+      "location": "Charlottesville, VA",
+      "start_date": "2013-06",
+      "end_date": "2016-12",
+      "current": false,
+      "description": "Managed enterprise client relationships and restructured team of SEO Specialists.",
+      "highlights": [
+        "Managed and restructured team of SEO Specialists, implementing process improvements and mentoring programs that increased team efficiency 4x",
+        "Led enterprise client relationships, translating technical strategies into clear recommendations for executives and non-technical stakeholders",
+        "Wrote SQL queries to analyze large datasets and measure campaign performance, identifying optimization opportunities across client portfolios"
+      ],
+      "skills": ["Team Management", "Enterprise SEO", "SQL", "Client Management", "Mentorship"]
+    }
+  ],
+  "skills": [
+    "Product Management",
+    "Agile/Scrum",
+    "SEO",
+    "SQL",
+    "Data Analysis",
+    "Stakeholder Management",
+    "JIRA",
+    "Figma",
+    "Google Analytics",
+    "User Research",
+    "A/B Testing"
+  ],
+  "education": [
+    {
+      "degree": "BA Economics & Foreign Affairs",
+      "institution": "University of Virginia",
+      "location": "Charlottesville, VA"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Digital Product Management Specialization",
+      "institution": "UVA (Coursera)",
+      "date": "2024-01"
+    },
+    {
+      "name": "Certified Scrum Product Owner",
+      "date": "2020-09"
+    },
+    {
+      "name": "Climatebase Fellow",
+      "date": "2024-05"
+    }
+  ]
+}
