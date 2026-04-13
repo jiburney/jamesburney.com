@@ -1,0 +1,59 @@
+{
+  "projects": [
+    {
+      "id": "what-mile",
+      "title": "What Mile?",
+      "description": "Interactive geospatial guessing game for the Appalachian Trail. Players identify locations on a map with scoring based on trail-mile accuracy.",
+      "image": "/images/projects/what-mile.webp",
+      "tech_stack": ["React", "Leaflet", "Claude Code"],
+      "status": "live",
+      "link": "https://what-mile.vercel.app",
+      "learned": "Geospatial UX is tricky — making a map game feel intuitive on mobile required rethinking every interaction.",
+      "category": "personal"
+    },
+    {
+      "id": "tiny-doodle",
+      "title": "Tiny Doodle",
+      "description": "A delightfully simple drawing app designed for children, featuring daily creative prompts. Built with React and designed for COPPA compliance. Minimal interface, maximum creativity.",
+      "image": "/images/projects/tiny-doodle.webp",
+      "tech_stack": ["React", "Canvas API", "PWA"],
+      "status": "live",
+      "link": "https://tinydoodle.app",
+      "learned": "Designing for children requires ruthless simplicity. Every feature must pass the 'can a 5-year-old figure this out?' test.",
+      "category": "personal"
+    },
+    {
+      "id": "carbon-tracker",
+      "title": "Carbon Tracker",
+      "description": "Browser widget helping users understand their web browsing carbon footprint through data visualization and behavioral insights.",
+      "image": "/images/projects/carbon-tracker.webp",
+      "tech_stack": ["React", "TypeScript", "Webpack"],
+      "status": "development",
+      "link": null,
+      "learned": "Carbon data is messy and inconsistent. Building trust in the numbers is as important as the numbers themselves.",
+      "category": "personal"
+    },
+    {
+      "id": "wild-blue-travel",
+      "title": "Wild Blue Travel",
+      "description": "SEO and growth consulting for an adventure travel company. Performed technical audit, restructured content strategy, and implemented schema markup to improve search visibility.",
+      "image": "/images/projects/wild-blue-travel.webp",
+      "tech_stack": ["Technical SEO", "Content Strategy", "Analytics"],
+      "status": "consulting",
+      "link": "https://wildbluetravel.com",
+      "learned": "Results: 3x organic traffic growth in 6 months. 45% increase in qualified lead submissions.",
+      "category": "consulting"
+    },
+    {
+      "id": "personal-site",
+      "title": "jamesburney.com",
+      "description": "This site — vanilla HTML/CSS/JS, no frameworks. Dark mode, service worker, low-power mode detection, accessibility-first design.",
+      "image": "/images/projects/personal-site.webp",
+      "tech_stack": ["HTML/CSS/JS", "Leaflet.js", "Service Worker"],
+      "status": "live",
+      "link": "https://jamesburney.com",
+      "learned": "Constraints breed creativity. Building without frameworks forces deeper understanding of web fundamentals.",
+      "category": "personal"
+    }
+  ]
+}
