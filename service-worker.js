@@ -10,7 +10,7 @@ if (self.location.hostname === 'localhost' || self.location.hostname === '127.0.
   });
 } else {
 
-const CACHE_NAME = 'jamesburney-v1';
+const CACHE_NAME = 'jamesburney-v2';
 const OFFLINE_URL = '/offline.html';
 
 // Assets to cache immediately on install
@@ -24,9 +24,7 @@ const PRECACHE_ASSETS = [
   '/js/low-power-mode.js',
   '/pages/experience.html',
   '/pages/projects.html',
-  '/pages/wanderings.html',
-  '/pages/hobbies.html',
-  '/pages/sustainability.html',
+  '/pages/about.html',
   '/data/metadata.json',
   '/data/projects.json',
   '/data/travels.json',

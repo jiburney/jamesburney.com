@@ -90,32 +90,28 @@
     const pageWeightElement = document.querySelector('.footer__page-weight');
     if (!pageWeightElement) return;
 
-    // Use Performance API if available
     if (window.performance && window.performance.getEntriesByType) {
-      // Wait for page to fully load
       window.addEventListener('load', () => {
-        setTimeout(() => {
-          const resources = performance.getEntriesByType('resource');
-          const navigation = performance.getEntriesByType('navigation')[0];
+        const resources = performance.getEntriesByType('resource');
+        const navigation = performance.getEntriesByType('navigation')[0];
 
-          let totalBytes = 0;
+        let totalBytes = 0;
 
-          // Add navigation (HTML) size
-          if (navigation && navigation.transferSize) {
-            totalBytes += navigation.transferSize;
-          }
+        // Add the HTML document size
+        if (navigation && navigation.decodedBodySize) {
+          totalBytes += navigation.decodedBodySize;
+        }
 
-          // Add all resource sizes
-          resources.forEach(resource => {
-            if (resource.transferSize) {
-              totalBytes += resource.transferSize;
-            }
-          });
+        // Add all resources, preferring decodedBodySize so cached resources
+        // still report their real size. Fall back to transferSize for
+        // cross-origin resources where decodedBodySize may be 0.
+        resources.forEach(resource => {
+          const size = resource.decodedBodySize || resource.transferSize || 0;
+          totalBytes += size;
+        });
 
-          // Convert to KB
-          const totalKB = (totalBytes / 1024).toFixed(1);
-          pageWeightElement.textContent = `This page weighs ~${totalKB} KB`;
-        }, 100);
+        const totalKB = (totalBytes / 1024).toFixed(1);
+        pageWeightElement.textContent = `This page weighs ~${totalKB} KB`;
       });
     } else {
       pageWeightElement.textContent = 'Page weight: calculating...';
