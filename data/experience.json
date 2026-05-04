@@ -8,10 +8,11 @@
       "start_date": "2024-01",
       "end_date": null,
       "current": true,
-      "description": "Building AI-powered products and providing product strategy consulting for small businesses.",
+      "description": "After leaving The Motley Fool I took some time to travel, hike the Appalachian Trail, and think about what I wanted to build next. In 2024 I completed the Climatebase Fellowship, a structured cohort program that gave me a foundation in the climate space. Since then I've been consulting for small businesses on product, SEO, and web, and spending a lot of time building with AI tools — the most energizing stretch of learning I've had in a while.",
       "highlights": [
-        "Build AI-powered products using Claude Code, including an interactive map-based guessing game (What Mile?), a creative drawing app (Tiny Doodle), and a carbon-tracking browser widget (Carbon Tracker)",
-        "Provide product strategy, web development, and UX consulting for small businesses, delivering UX/UI redesigns and technical improvements"
+        "Completed the Climatebase Fellowship (2024), a structured program for professionals transitioning into climate-focused roles",
+        "Provide ongoing product, SEO, and web consulting for small businesses, including Wild Blue Travel",
+        "Built several AI-assisted personal projects using Claude Code, including What Mile?, an interactive map-based geography guessing game, and Carbon Tracker, a browser widget for tracking website carbon footprint"
       ],
       "skills": ["Claude Code", "React", "Product Strategy", "UX Consulting", "Web Development"]
     },
@@ -35,7 +36,7 @@
       "start_date": "2020-10",
       "end_date": "2022-07",
       "current": false,
-      "description": "Led product development for new customer acquisition product and unified member dashboard.",
+      "description": "The Motley Fool is where product management became my full-time focus. I joined as a Technical SEO Strategist, sat with the product team, and worked directly with developers on technical implementation. Within a few months I was promoted to Product Owner for fool.com, a big role at a company that ran almost entirely on content and organic reach. I spent the next two-plus years there, eventually moving into a Product Lead role to head up a new subscription initiative.",
       "highlights": [
         "Led development of new customer acquisition product from discovery to pre-launch, conducting user research, creating interactive demos that secured executive approval, and achieving positive early user feedback",
         "Launched a unified member dashboard serving millions of users, consolidating multiple product experiences into a single interface that improved engagement and navigation",
@@ -84,7 +85,7 @@
       "start_date": "2019-03",
       "end_date": "2019-07",
       "current": false,
-      "description": "Led global SEO strategy across engineering, product, and marketing teams.",
+      "description": "Cvent brought me back east after Zillow. The role was narrower than expected — focused on the marketing site with limited reach into the broader product and engineering organization — and it became clear quickly that the path I was looking for wasn't there.",
       "highlights": [
         "Led global SEO strategy, advising executives on technical recommendations and building implementation roadmaps across engineering, product, and marketing teams"
       ],
@@ -98,12 +99,12 @@
       "start_date": "2016-12",
       "end_date": "2018-08",
       "current": false,
-      "description": "Led SEO product development for HotPads, a consumer rental product within the Zillow Group portfolio.",
+      "description": "HotPads was one of four Zillow Group rental properties — and unlike its siblings, it ran almost entirely on organic search. No marketing team, no paid acquisition. Just Google, email notifications, and push alerts for repeat visits. That made SEO existential, not just strategic.",
       "highlights": [
-        "Led development and launch of SEO Links API, collaborating closely with engineering to develop API specifications that reduced front-end server calls by ~10%",
-        "Drove consolidation of list/map search experiences, using SQL and data analysis to identify issues and partnering with engineers to implement a solution that improved user experience and increased traffic",
-        "Diagnosed complex traffic decline requiring long-term experience improvements rather than quick fixes, demonstrating sound product judgment under pressure",
-        "Collaborated with engineering throughout the development lifecycle, participating in sprint planning, technical design discussions, and launch coordination"
+        "Built and launched the SEO Links API in close collaboration with engineering, reducing front-end server calls by ~10% and improving crawl efficiency across the site",
+        "When a Google Quality algorithm update caused a 20%+ overnight traffic drop, led the diagnosis: deep research, industry networking, and direct consultation with Google alumni inside Zillow to understand the update's intent",
+        "Concluded the real fix was long-term investment in content quality and user experience — not technical quick wins — and designed a roadmap accordingly",
+        "Shipped the Nearby Listings widget to reduce bounce rates on long-tail pages with no inventory, and added in-page filter prompts after data showed that users who changed filters spent more time, visited more pages, and submitted more inquiries"
       ],
       "skills": ["Product Management", "SEO", "SQL", "API Development", "Data Analysis"]
     },
@@ -115,11 +116,11 @@
       "start_date": "2013-06",
       "end_date": "2016-12",
       "current": false,
-      "description": "Managed enterprise client relationships and restructured team of SEO Specialists.",
+      "description": "Merkle is where I started, and where I figured out what kind of work I actually wanted to do. I came in as a paid search analyst, switched to SEO once I realized how deeply it was entangled with web development, and got promoted nearly every year: specialist, senior specialist, account manager, senior account manager. I managed an eclectic client portfolio across various industries, including aviation wire, flowers, nationwide retailers, and a UK tabloid, because I enjoyed the challenge that came with learning and understanding different businesses. By the end I'd hit a ceiling, and knew I was more interested in building than managing campaigns.",
       "highlights": [
-        "Managed and restructured team of SEO Specialists, implementing process improvements and mentoring programs that increased team efficiency 4x",
-        "Led enterprise client relationships, translating technical strategies into clear recommendations for executives and non-technical stakeholders",
-        "Wrote SQL queries to analyze large datasets and measure campaign performance, identifying optimization opportunities across client portfolios"
+        "Pitched and led a full site architecture and content buildout for A.E. Petsche (Arrow Electronics), growing their site from roughly 20 pages to hundreds of targeted product and category pages, creating the organic search presence they had essentially none of before",
+        "Restructured how the team operated: shifted specialists from support roles into owning their accounts directly, which improved work quality and freed managers to focus on strategy rather than being a communication layer",
+        "Coached a team of five with different approaches for each person, from giving high-initiative team members autonomy to run with projects, to intensive preparation work that helped a less confident team member lead client calls independently"
       ],
       "skills": ["Team Management", "Enterprise SEO", "SQL", "Client Management", "Mentorship"]
     }

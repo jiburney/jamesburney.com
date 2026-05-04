@@ -91,6 +91,8 @@
     }
   </style>
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=National+Park:wght@600&text=James%20Burney&display=swap">
+
   <!-- Theme toggle -->
   <script src="/js/theme-toggle.js"></script>
 </head>
@@ -98,7 +100,12 @@
   <!-- Header -->
   <header class="header">
     <div class="header__inner">
-      <a href="/" class="header__logo">James Burney</a>
+      <a href="/" class="header__logo">
+        <svg width="12" height="30" viewBox="0 0 14 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M1,3.5 L2.5,1.5 L4,2.5 L5.5,1 L7,2 L8.5,1 L10,2 L11.5,1.5 L13,3.5 L13,28.5 L11.5,30.5 L10,29.5 L8.5,31 L7,30 L5.5,31 L4,29.5 L2.5,30.5 L1,28.5 Z" fill="white"/>
+        </svg>
+        <span style="font-family: 'National Park', sans-serif; font-weight: 600; font-size: 20px; letter-spacing: 0.03em;">James Burney</span>
+      </a>
 
       <nav class="header__nav">
         <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false">
@@ -111,25 +118,26 @@
           <li><a href="/" class="nav__link" data-page="home">Home</a></li>
           <li><a href="/pages/experience.html" class="nav__link" data-page="experience">Experience</a></li>
           <li><a href="/pages/projects.html" class="nav__link nav__link--active" data-page="projects">Projects</a></li>
-          <li><a href="/pages/beyond-work.html" class="nav__link" data-page="beyond-work">Beyond Work</a></li>
+          <li><a href="/pages/about.html" class="nav__link" data-page="about">About Me</a></li>
+          <li class="nav__theme-toggle">
+            <button class="theme-toggle" aria-label="Switch to light mode">
+              <svg class="theme-toggle__icon theme-toggle__sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+              <svg class="theme-toggle__icon theme-toggle__moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+            </button>
+          </li>
         </ul>
-
-        <button class="theme-toggle" aria-label="Switch to light mode">
-          <svg class="theme-toggle__icon theme-toggle__sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-          </svg>
-          <svg class="theme-toggle__icon theme-toggle__moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
-        </button>
       </nav>
     </div>
   </header>
@@ -137,12 +145,12 @@
   <!-- Main Content -->
   <main>
     <!-- Page Header -->
-    <section class="hero">
+    <section class="hero hero--page">
       <div class="container">
         <div class="content-container">
           <p class="hero__tagline">What I've Been Building</p>
           <h1 class="hero__title">Projects</h1>
-          <p class="hero__description">
+          <p class="hero__description" style="max-width: 100%;">
             A mix of personal experiments, consulting work, and passion projects. I believe in learning by doing—each project here taught me something valuable about product development, user behavior, or technology.
           </p>
         </div>
@@ -156,16 +164,14 @@
 
           <!-- What Mile? -->
           <article class="card project-card animate-on-scroll">
-            <div class="project-card__image" style="background: linear-gradient(135deg, #2d5016, #1a7f37); display: flex; align-items: center; justify-content: center;">
-              <span style="font-size: 3rem;">🥾</span>
-            </div>
+            <img src="/images/projects/what-mile-logo.webp" alt="What Mile?" class="project-card__image" loading="lazy" style="object-fit: contain; background-color: #f2efe8;">
             <div class="project-card__content" style="margin-top: var(--spacing-lg);">
               <div style="display: flex; align-items: center; gap: var(--spacing-sm); margin-bottom: var(--spacing-sm);">
                 <h3 class="card__title" style="margin-bottom: 0;">What Mile?</h3>
                 <span class="project-card__status project-card__status--live">Live</span>
               </div>
               <p class="card__description">
-                Interactive geospatial guessing game for the Appalachian Trail. Players identify locations on a map with scoring based on trail-mile accuracy.
+                A map-based guessing game for the Appalachian Trail. Players identify locations along the trail with scoring based on how close they get. Built after completing my own thru-hike in 2023.
               </p>
               <div class="card__tags">
                 <span class="tag">React</span>
@@ -173,11 +179,11 @@
                 <span class="tag">Claude Code</span>
               </div>
               <p class="project-card__learned">
-                <strong>Key learning:</strong> Geospatial UX is tricky — making a map game feel intuitive on mobile required rethinking every interaction.
+                <strong>Key learning:</strong> Making a map game feel intuitive on mobile required rethinking every interaction from scratch.
               </p>
               <div style="margin-top: var(--spacing-md);">
                 <a href="https://what-mile.vercel.app" class="btn btn--ghost" target="_blank" rel="noopener noreferrer">
-                  Play the Game →
+                  Play the Game &rarr;
                 </a>
               </div>
             </div>
@@ -185,16 +191,14 @@
 
           <!-- Tiny Doodle -->
           <article class="card project-card animate-on-scroll">
-            <div class="project-card__image" style="background: linear-gradient(135deg, var(--accent-green-light), var(--accent-blue-light)); display: flex; align-items: center; justify-content: center;">
-              <span style="font-size: 3rem;">🎨</span>
-            </div>
+            <img src="/images/projects/tiny-doodle-logo-full.webp" alt="Tiny Doodle" class="project-card__image" loading="lazy" style="object-fit: contain; background-color: #fff; padding: 1rem;">
             <div class="project-card__content" style="margin-top: var(--spacing-lg);">
               <div style="display: flex; align-items: center; gap: var(--spacing-sm); margin-bottom: var(--spacing-sm);">
                 <h3 class="card__title" style="margin-bottom: 0;">Tiny Doodle</h3>
                 <span class="project-card__status project-card__status--live">Live</span>
               </div>
               <p class="card__description">
-                A delightfully simple drawing app designed for children, featuring daily creative prompts. Built with React and designed for COPPA compliance. Minimal interface, maximum creativity.
+                A simple drawing app designed for children. Minimal interface, maximum creativity. Built with React and designed with COPPA compliance in mind.
               </p>
               <div class="card__tags">
                 <span class="tag">React</span>
@@ -202,11 +206,38 @@
                 <span class="tag">PWA</span>
               </div>
               <p class="project-card__learned">
-                <strong>Key learning:</strong> Designing for children requires ruthless simplicity. Every feature must pass the "can a 5-year-old figure this out?" test.
+                <strong>Key learning:</strong> Designing for children requires ruthless simplicity. Every feature must pass the &ldquo;can a 5-year-old figure this out?&rdquo; test.
               </p>
               <div style="margin-top: var(--spacing-md);">
                 <a href="https://tinydoodle.app" class="btn btn--ghost" target="_blank" rel="noopener noreferrer">
-                  View Project →
+                  View Project &rarr;
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Tummy Track -->
+          <article class="card project-card animate-on-scroll">
+            <img src="/images/projects/tummy-track-logo.webp" alt="Tummy Track" class="project-card__image" loading="lazy" style="object-fit: contain; background-color: #fff; padding: 1rem;">
+            <div class="project-card__content" style="margin-top: var(--spacing-lg);">
+              <div style="display: flex; align-items: center; gap: var(--spacing-sm); margin-bottom: var(--spacing-sm);">
+                <h3 class="card__title" style="margin-bottom: 0;">Tummy Track</h3>
+                <span class="project-card__status project-card__status--live">Live</span>
+              </div>
+              <p class="card__description">
+                A simple food and symptom journal for people trying to identify dietary triggers. Voice-to-text entry, automatic date/time/meal detection, allergy tags, and a flare-up timeline. Everything on the market was either too complex or required a subscription.
+              </p>
+              <div class="card__tags">
+                <span class="tag">PWA</span>
+                <span class="tag">Voice Input</span>
+                <span class="tag">Mobile-first</span>
+              </div>
+              <p class="project-card__learned">
+                <strong>Key learning:</strong> The best features are the ones that get out of the way &mdash; auto-detecting meal time from the clock meant one less thing users had to think about.
+              </p>
+              <div style="margin-top: var(--spacing-md);">
+                <a href="https://food-journal-94k.pages.dev/" class="btn btn--ghost" target="_blank" rel="noopener noreferrer">
+                  View Project &rarr;
                 </a>
               </div>
             </div>
@@ -214,16 +245,14 @@
 
           <!-- Carbon Tracker -->
           <article class="card project-card animate-on-scroll">
-            <div class="project-card__image" style="background: linear-gradient(135deg, #1a7f37, #116329); display: flex; align-items: center; justify-content: center;">
-              <span style="font-size: 3rem;">🌍</span>
-            </div>
+            <img src="/images/projects/carbon-tracker.webp" alt="Carbon Tracker" class="project-card__image" loading="lazy" style="object-fit: cover;">
             <div class="project-card__content" style="margin-top: var(--spacing-lg);">
               <div style="display: flex; align-items: center; gap: var(--spacing-sm); margin-bottom: var(--spacing-sm);">
                 <h3 class="card__title" style="margin-bottom: 0;">Carbon Tracker</h3>
-                <span class="project-card__status project-card__status--development">In Development</span>
+                <span class="project-card__status project-card__status--live">In Beta</span>
               </div>
               <p class="card__description">
-                Browser widget helping users understand their web browsing carbon footprint through data visualization and behavioral insights.
+                A browser widget that helps users understand the carbon footprint of their web browsing through data visualization and behavioral nudges.
               </p>
               <div class="card__tags">
                 <span class="tag">React</span>
@@ -234,37 +263,8 @@
                 <strong>Key learning:</strong> Carbon data is messy and inconsistent. Building trust in the numbers is as important as the numbers themselves.
               </p>
               <div style="margin-top: var(--spacing-md);">
-                <span class="btn btn--ghost" style="opacity: 0.5; cursor: default;">
-                  Coming Soon
-                </span>
-              </div>
-            </div>
-          </article>
-
-          <!-- Wild Blue Travel -->
-          <article class="card project-card animate-on-scroll">
-            <div class="project-card__image" style="background: linear-gradient(135deg, var(--accent-blue-light), rgba(88, 166, 255, 0.3)); display: flex; align-items: center; justify-content: center;">
-              <span style="font-size: 3rem;">✈️</span>
-            </div>
-            <div class="project-card__content" style="margin-top: var(--spacing-lg);">
-              <div style="display: flex; align-items: center; gap: var(--spacing-sm); margin-bottom: var(--spacing-sm);">
-                <h3 class="card__title" style="margin-bottom: 0;">Wild Blue Travel</h3>
-                <span class="project-card__status project-card__status--consulting">Consulting</span>
-              </div>
-              <p class="card__description">
-                SEO and growth consulting for an adventure travel company. Performed technical audit, restructured content strategy, and implemented schema markup to improve search visibility.
-              </p>
-              <div class="card__tags">
-                <span class="tag">Technical SEO</span>
-                <span class="tag">Content Strategy</span>
-                <span class="tag">Analytics</span>
-              </div>
-              <p class="project-card__learned">
-                <strong>Results:</strong> 3x organic traffic growth in 6 months. 45% increase in qualified lead submissions.
-              </p>
-              <div style="margin-top: var(--spacing-md);">
-                <a href="https://wildbluetravel.com" class="btn btn--ghost" target="_blank" rel="noopener noreferrer">
-                  View Site →
+                <a href="https://jiburney.github.io/carbon-tracker-landing/" class="btn btn--ghost" target="_blank" rel="noopener noreferrer">
+                  View Landing Page &rarr;
                 </a>
               </div>
             </div>
@@ -281,15 +281,41 @@
                 <span class="project-card__status project-card__status--live">Live</span>
               </div>
               <p class="card__description">
-                This site — vanilla HTML/CSS/JS, no frameworks. Dark mode, service worker, low-power mode detection, accessibility-first design.
+                This site was built with sustainability as a core design constraint, not an afterthought. System fonts only, no frameworks, dark mode default, service worker for offline caching, and lazy-loaded images throughout. Every decision was made with page weight and energy consumption in mind.
               </p>
               <div class="card__tags">
                 <span class="tag">HTML/CSS/JS</span>
-                <span class="tag">Leaflet.js</span>
                 <span class="tag">Service Worker</span>
+                <span class="tag">Sustainable Design</span>
               </div>
               <p class="project-card__learned">
-                <strong>Key learning:</strong> Constraints breed creativity. Building without frameworks forces deeper understanding of web fundamentals.
+                <strong>Key learning:</strong> Constraints breed creativity. No frameworks forces a deeper understanding of web fundamentals &mdash; and a much lighter page.
+              </p>
+            </div>
+          </article>
+
+          <!-- SEO Insight Engine -->
+          <article class="card project-card animate-on-scroll">
+            <div class="project-card__image" style="background: linear-gradient(135deg, var(--bg-tertiary), var(--border-color)); display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+              <span style="font-size: 2.5rem;">🔍</span>
+              <span style="font-size: 2.5rem;">🚧</span>
+            </div>
+            <div class="project-card__content" style="margin-top: var(--spacing-lg);">
+              <div style="display: flex; align-items: center; gap: var(--spacing-sm); margin-bottom: var(--spacing-sm);">
+                <h3 class="card__title" style="margin-bottom: 0;">SEO Insight Engine</h3>
+                <span class="project-card__status project-card__status--development">In Development</span>
+              </div>
+              <p class="card__description">
+                Small service businesses don&rsquo;t need more analytics &mdash; they need to be told what to do. This tool connects to Google Search Console and Analytics, runs data analysis, and delivers a weekly email of prioritized actions. No dashboards to interpret, no expertise required.
+              </p>
+              <div class="card__tags">
+                <span class="tag">Python</span>
+                <span class="tag">Pandas</span>
+                <span class="tag">Claude API</span>
+                <span class="tag">GSC/GA</span>
+              </div>
+              <p class="project-card__learned">
+                <strong>Key learning:</strong> The hard problem isn&rsquo;t the data pipeline &mdash; it&rsquo;s knowing which insights are actually worth acting on.
               </p>
             </div>
           </article>
@@ -319,14 +345,7 @@
     <div class="container">
       <div class="footer__inner">
         <div class="footer__badges">
-          <a href="https://www.websitecarbon.com/website/jamesburney-com/" class="footer__badge" target="_blank" rel="noopener noreferrer">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-              <path d="M2 17l10 5 10-5"></path>
-              <path d="M2 12l10 5 10-5"></path>
-            </svg>
-            Website Carbon
-          </a>
+          <div id="wcb" class="carbonbadge wcb-d"></div>
           <a href="https://www.thegreenwebfoundation.org/green-web-check/?url=jamesburney.com" class="footer__badge" target="_blank" rel="noopener noreferrer">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="10"></circle>
@@ -376,5 +395,6 @@
   <!-- Scripts -->
   <script src="/js/main.js" defer></script>
   <script src="/js/low-power-mode.js" defer></script>
+  <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
 </body>
 </html>

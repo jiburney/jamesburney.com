@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Primary Meta Tags -->
-  <title>Beyond Work | James Burney</title>
-  <meta name="title" content="Beyond Work | James Burney">
+  <title>About Me | James Burney</title>
+  <meta name="title" content="About Me | James Burney">
   <meta name="description" content="Appalachian Trail thru-hiker, geography enthusiast, craft beer explorer, and world traveler.">
   <meta name="keywords" content="Appalachian Trail, thru-hike, travel, craft beer, GeoGuessr, geography">
   <meta name="author" content="James Burney">
@@ -14,19 +14,19 @@
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://jamesburney.com/pages/beyond-work.html">
-  <meta property="og:title" content="Beyond Work | James Burney">
+  <meta property="og:url" content="https://jamesburney.com/pages/about.html">
+  <meta property="og:title" content="About Me | James Burney">
   <meta property="og:description" content="Appalachian Trail thru-hiker, geography enthusiast, craft beer explorer, and world traveler.">
   <meta property="og:image" content="https://jamesburney.com/images/og-image.jpg">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://jamesburney.com/pages/beyond-work.html">
-  <meta property="twitter:title" content="Beyond Work | James Burney">
+  <meta property="twitter:url" content="https://jamesburney.com/pages/about.html">
+  <meta property="twitter:title" content="About Me | James Burney">
   <meta property="twitter:description" content="Appalachian Trail thru-hiker, geography enthusiast, craft beer explorer, and world traveler.">
 
   <!-- Additional Meta -->
-  <link rel="canonical" href="https://jamesburney.com/pages/beyond-work.html">
+  <link rel="canonical" href="https://jamesburney.com/pages/about.html">
   <meta name="theme-color" content="#0d1117">
 
   <!-- Favicon -->
@@ -140,8 +140,7 @@
 
     @media (max-width: 768px) {
       .stats-row {
-        flex-direction: column;
-        gap: var(--spacing-lg);
+        gap: var(--spacing-xl);
       }
 
       .contact-strip__links {
@@ -152,6 +151,8 @@
     }
   </style>
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=National+Park:wght@600&text=James%20Burney&display=swap">
+
   <!-- Theme toggle -->
   <script src="/js/theme-toggle.js"></script>
 </head>
@@ -159,7 +160,12 @@
   <!-- Header -->
   <header class="header">
     <div class="header__inner">
-      <a href="/" class="header__logo">James Burney</a>
+      <a href="/" class="header__logo">
+        <svg width="12" height="30" viewBox="0 0 14 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M1,3.5 L2.5,1.5 L4,2.5 L5.5,1 L7,2 L8.5,1 L10,2 L11.5,1.5 L13,3.5 L13,28.5 L11.5,30.5 L10,29.5 L8.5,31 L7,30 L5.5,31 L4,29.5 L2.5,30.5 L1,28.5 Z" fill="white"/>
+        </svg>
+        <span style="font-family: 'National Park', sans-serif; font-weight: 600; font-size: 20px; letter-spacing: 0.03em;">James Burney</span>
+      </a>
 
       <nav class="header__nav">
         <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false">
@@ -172,25 +178,26 @@
           <li><a href="/" class="nav__link" data-page="home">Home</a></li>
           <li><a href="/pages/experience.html" class="nav__link" data-page="experience">Experience</a></li>
           <li><a href="/pages/projects.html" class="nav__link" data-page="projects">Projects</a></li>
-          <li><a href="/pages/beyond-work.html" class="nav__link nav__link--active" data-page="beyond-work">Beyond Work</a></li>
+          <li><a href="/pages/about.html" class="nav__link nav__link--active" data-page="about">About Me</a></li>
+          <li class="nav__theme-toggle">
+            <button class="theme-toggle" aria-label="Switch to light mode">
+              <svg class="theme-toggle__icon theme-toggle__sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+              <svg class="theme-toggle__icon theme-toggle__moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+            </button>
+          </li>
         </ul>
-
-        <button class="theme-toggle" aria-label="Switch to light mode">
-          <svg class="theme-toggle__icon theme-toggle__sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-          </svg>
-          <svg class="theme-toggle__icon theme-toggle__moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
-        </button>
       </nav>
     </div>
   </header>
@@ -198,14 +205,22 @@
   <!-- Main Content -->
   <main>
     <!-- Page Header -->
-    <section class="hero">
+    <section class="hero hero--page">
       <div class="container">
         <div class="content-container">
-          <h1 class="hero__title">Beyond Work</h1>
-          <p class="hero__description">
-            The stuff that doesn't fit on a resume but says a lot about who I am.
+          <p class="hero__tagline">Who am I?</p>
+          <h1 class="hero__title">About Me</h1>
+          <p class="hero__description" style="max-width: 100%; line-height: 1.8;">
+            I'm James. I enjoy building things, from LEGO when I was a kid (and still to this day) to products at Zillow and The Motley Fool. More recently I've been building interesting apps on my own with the help of AI. I'm at my best when I'm exploring something new, figuring out how it works, and making it useful and intuitive. I like when things just work, which often takes longer than you'd expect. In 2023, burnt out after a decade of work and two years of a pandemic, I walked the entire Appalachian Trail, from Georgia to Maine, 2,190 miles. When I'm not at a laptop I'm probably out exploring somewhere. A friend in San Francisco once told me I'd seen more of the Bay Area in three months than he had in three years. That tracks. These days I'm looking to build things that actually make a difference.
           </p>
         </div>
+      </div>
+    </section>
+
+    <!-- About Me Photo -->
+    <section class="section section--tight" style="padding-top: 2; padding-bottom: var(--spacing-lg);">
+      <div class="container" style="display: flex; justify-content: center;">
+        <img src="/images/about-me.webp" alt="James Burney with Katahdin in the background, at the end of his Appalachian Trail thru-hike" style="width: 100%; max-width: 600px; border-radius: 8px; display: block;" loading="lazy">
       </div>
     </section>
 
@@ -213,6 +228,7 @@
     <section class="section">
       <div class="container">
         <div class="content-container">
+          <h2 class="animate-on-scroll" style="margin-bottom: var(--spacing-2xl);">Hobbies &amp; Interests</h2>
 
           <!-- Appalachian Trail -->
           <div class="beyond-section animate-on-scroll">
@@ -222,13 +238,13 @@
             </div>
             <div class="beyond-section__body">
               <p>
-                In 2023 I thru-hiked the Appalachian Trail — 2,190 miles from Georgia to Maine over six months. It was the hardest and most rewarding thing I've ever done. Living out of a backpack with no schedule except "walk north" taught me more about problem-solving, adaptability, and patience than any job ever has.
+                In 2023 I thru-hiked the Appalachian Trail &mdash; 2,190 miles from Georgia to Maine over six months. It was the hardest and most rewarding thing I've ever done. Living out of a backpack with no schedule except &ldquo;walk north&rdquo; taught me more about problem-solving, adaptability, and patience than any job ever has.
               </p>
               <p>
-                The trail also inspired <a href="/pages/projects.html">What Mile?</a>, a geospatial guessing game I built after getting home.
+                I told people afterward that I had to hike 2,000 miles to discover a love for backpacking. The trail also inspired <a href="/pages/projects.html">What Mile?</a>, a geospatial guessing game I built after getting home.
               </p>
             </div>
-            <div class="stats-row">
+            <div class="stats-row" style="flex-wrap: wrap; gap: var(--spacing-lg);">
               <div class="stat">
                 <span class="stat__number">2,190</span>
                 <span class="stat__label">miles</span>
@@ -252,24 +268,41 @@
             </div>
             <div class="beyond-section__body">
               <p>
-                I've been obsessed with maps and geography for as long as I can remember. GeoGuessr turned that obsession into a competitive hobby — there's something deeply satisfying about identifying a location from a single street-level image based on road markings, vegetation, and sun angle.
+                I've been obsessed with maps and geography for as long as I can remember. In my spare time I'll often pull up a map and just explore &mdash; tracing roads into places I've never been, reading about regions, getting curious about why a town exists where it does. GeoGuessr turned that obsession into a competitive hobby: there's something deeply satisfying about identifying a location from a single street-level image based on road markings, vegetation, and sun angle.
               </p>
               <p>
-                Spatial awareness is an underrated skill. Understanding how places connect — physically, culturally, economically — shapes how I think about products and the people who use them.
+                Spatial awareness is an underrated skill. Understanding how places connect &mdash; physically, culturally, economically &mdash; shapes how I think about products and the people who use them.
               </p>
             </div>
           </div>
 
-          <!-- Wanderings -->
+          <!-- Travel -->
           <div class="beyond-section animate-on-scroll">
             <div class="beyond-section__header">
-              <span class="beyond-section__icon" aria-hidden="true">✈️</span>
-              <h2 class="beyond-section__title">Wanderings</h2>
+              <span class="beyond-section__icon" aria-hidden="true">🗺️</span>
+              <h2 class="beyond-section__title">Travel</h2>
             </div>
             <div class="beyond-section__body">
               <p>
-                I travel as much as I can and take a lot of photos I rarely post. So far I've visited 50+ countries across six continents — from backpacking through Southeast Asia to road-tripping Iceland's Ring Road. Every trip reshapes how I see the world, which is the whole point.
+                My default mode of exploration is close to home &mdash; a weekend drive to a trail I haven't hiked, a historic site I've driven past a dozen times, or a national park I've been meaning to get to. I've made it to 31 national parks so far, plus countless other sites managed by the Park Service, and I'm always adding to the list.
               </p>
+              <p>
+                I've also been further afield: spent time along the coasts of Greece and Italy, traveled through eastern Africa (Ethiopia and Tanzania), and this past December transited the Panama Canal, which was one of the more remarkable things I've experienced. I travel internationally when it feels right, though I'm increasingly thoughtful about flying &mdash; with current climate trajectories, I think carefully about how often and where I go by air.
+              </p>
+            </div>
+            <div class="stats-row" style="flex-wrap: wrap; gap: var(--spacing-lg);">
+              <div class="stat">
+                <span class="stat__number">20</span>
+                <span class="stat__label">Countries</span>
+              </div>
+              <div class="stat">
+                <span class="stat__number">43</span>
+                <span class="stat__label">States</span>
+              </div>
+                 <div class="stat">
+                <span class="stat__number">31</span>
+                <span class="stat__label">National Parks</span>
+              </div>
             </div>
           </div>
 
@@ -281,21 +314,20 @@
             </div>
             <div class="beyond-section__body">
               <p>
-                What started as a casual interest in college turned into a Cicerone certification and visits to roughly 500 breweries across 23+ states. I appreciate the craft — the intersection of science, creativity, and community that goes into a great beer. It's also a fantastic lens for exploring new cities.
+                What started as a casual interest in college turned into visits to roughly 500 breweries across 26+ states. I appreciate the craft &mdash; the intersection of science, creativity, and community that goes into a great beer. It's also a great excuse to explore a new neighborhood or city.
+              </p>
+              <p>
+                I hold the Certified Beer Server credential from the Cicerone Certification Program &mdash; the first level of a rigorous industry certification. I've thought about going after the full Certified Cicerone at some point, mostly out of genuine curiosity.
               </p>
             </div>
-            <div class="stats-row">
+            <div class="stats-row" style="flex-wrap: wrap; gap: var(--spacing-lg);">
               <div class="stat">
                 <span class="stat__number">~500</span>
-                <span class="stat__label">breweries visited</span>
+                <span class="stat__label">Breweries Visited</span>
               </div>
               <div class="stat">
-                <span class="stat__number">23+</span>
-                <span class="stat__label">states</span>
-              </div>
-              <div class="stat">
-                <span class="stat__number">Cicerone</span>
-                <span class="stat__label">certified</span>
+                <span class="stat__number">26+</span>
+                <span class="stat__label">States</span>
               </div>
             </div>
           </div>
@@ -340,14 +372,7 @@
     <div class="container">
       <div class="footer__inner">
         <div class="footer__badges">
-          <a href="https://www.websitecarbon.com/website/jamesburney-com/" class="footer__badge" target="_blank" rel="noopener noreferrer">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-              <path d="M2 17l10 5 10-5"></path>
-              <path d="M2 12l10 5 10-5"></path>
-            </svg>
-            Website Carbon
-          </a>
+          <div id="wcb" class="carbonbadge wcb-d"></div>
           <a href="https://www.thegreenwebfoundation.org/green-web-check/?url=jamesburney.com" class="footer__badge" target="_blank" rel="noopener noreferrer">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="10"></circle>
@@ -397,5 +422,6 @@
   <!-- Scripts -->
   <script src="/js/main.js" defer></script>
   <script src="/js/low-power-mode.js" defer></script>
+  <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
 </body>
 </html>

@@ -43,6 +43,18 @@
     .hero--home {
       position: relative;
       overflow: hidden;
+      padding-bottom: var(--spacing-3xl);
+    }
+
+    /* Homepage section spacing — tighter than default .section */
+    main > .section {
+      padding-top: var(--spacing-3xl);
+      padding-bottom: var(--spacing-3xl);
+    }
+
+    main > .section.section--tight {
+      padding-top: var(--spacing-xl);
+      padding-bottom: var(--spacing-xl);
     }
 
     .hero__bg-texture {
@@ -51,8 +63,25 @@
       left: 0;
       width: 100%;
       height: 100%;
-      opacity: 0.055;
       pointer-events: none;
+    }
+
+    .hero__bg-contours {
+      color: var(--accent-green);
+      opacity: 0.15;
+    }
+
+    .hero__bg-profile {
+      color: var(--text-primary);
+      opacity: 0.07;
+    }
+
+    [data-theme="light"] .hero__bg-contours {
+      opacity: 0.08;
+    }
+
+    [data-theme="light"] .hero__bg-profile {
+      opacity: 0.05;
     }
 
     .hero__label {
@@ -77,90 +106,243 @@
       line-height: 1.7;
     }
 
-    /* Experience Strip */
-    .experience-strip {
+    /* Logo Bar */
+    .logo-bar {
       display: flex;
-      flex-wrap: wrap;
-      gap: var(--spacing-lg);
       align-items: center;
+      justify-content: center;
+      gap: var(--spacing-2xl);
+      flex-wrap: wrap;
       padding: var(--spacing-xl) 0;
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
     }
 
-    .experience-strip__item {
+    .logo-bar__label {
+      font-size: var(--font-size-xs);
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: var(--spacing-md);
+    }
+
+    .logo-bar__item {
+      opacity: 0.4;
+      transition: opacity var(--transition-fast);
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-bar__item:hover {
+      opacity: 0.8;
+    }
+
+    .logo-bar__item img {
+      height: 20px;
+      width: auto;
+      filter: brightness(0);
+    }
+
+    .logo-bar__item--zillow img { height: 18px; }
+    .logo-bar__item--motley-fool img { height: 26px; }
+    .logo-bar__item--merkle img { height: 16px; }
+
+    [data-theme="dark"] .logo-bar__item img {
+      filter: brightness(0) invert(1);
+    }
+
+    .logo-bar__link {
+      font-size: var(--font-size-sm);
+      font-weight: 500;
+      color: var(--text-muted);
+      transition: color var(--transition-fast);
+      white-space: nowrap;
+    }
+
+    .logo-bar__link:hover {
+      color: var(--accent-green);
+    }
+
+    @media (max-width: 768px) {
+      .logo-bar {
+        gap: var(--spacing-xl);
+      }
+      .logo-bar__link {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    /* Section labels */
+    .section__label {
+      font-size: var(--font-size-xs);
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent-green);
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .section__heading {
+      font-size: var(--font-size-2xl);
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .section__sub {
+      font-size: var(--font-size-base);
+      color: var(--text-secondary);
+      max-width: 580px;
+      margin-bottom: var(--spacing-xl);
+      line-height: 1.7;
+    }
+
+    /* Projects grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--spacing-lg);
+    }
+
+    .project-card {
+      background: var(--bg-primary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: var(--spacing-lg);
       display: flex;
       flex-direction: column;
-      gap: 2px;
+      gap: var(--spacing-sm);
     }
 
-    .experience-strip__company {
+    .project-card__top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: var(--spacing-sm);
+    }
+
+    .project-card__title {
       font-size: var(--font-size-base);
       font-weight: 600;
       color: var(--text-primary);
+      margin: 0;
     }
 
-    .experience-strip__title {
-      font-size: var(--font-size-sm);
-      color: var(--text-secondary);
-    }
-
-    .experience-strip__divider {
-      width: 1px;
-      height: 32px;
-      background-color: var(--border-color);
-    }
-
-    .experience-strip__link {
-      font-size: var(--font-size-sm);
-      font-weight: 500;
-      color: var(--accent-blue);
-    }
-
-    /* Featured Projects */
-    .featured-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: var(--spacing-xl);
-    }
-
-    .featured-card {
-      display: flex;
-      flex-direction: column;
-      gap: var(--spacing-sm);
-    }
-
-    .featured-card__header {
-      display: flex;
-      align-items: center;
-      gap: var(--spacing-sm);
-    }
-
-    .featured-card__icon {
-      font-size: 1.5rem;
-      line-height: 1;
-    }
-
-    .featured-card__status {
+    .project-card__status {
       display: inline-block;
       padding: 2px 8px;
       font-size: var(--font-size-xs);
       font-weight: 500;
       border-radius: var(--radius-sm);
-      text-transform: uppercase;
+      white-space: nowrap;
     }
 
-    .featured-card__status--live {
+    .project-card__status--live {
       background-color: var(--accent-green-light);
       color: var(--accent-green);
     }
 
-    .featured-card__status--development {
+    .project-card__status--development {
       background-color: var(--accent-blue-light);
       color: var(--accent-blue);
     }
 
-    .featured-card__status--consulting {
-      background-color: rgba(210, 153, 34, 0.15);
-      color: var(--warning-color);
+    .project-card__desc {
+      font-size: var(--font-size-sm);
+      color: var(--text-secondary);
+      line-height: 1.65;
+      flex: 1;
+    }
+
+    .project-card__tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--spacing-xs);
+    }
+
+    .tech-tag {
+      font-size: var(--font-size-xs);
+      color: var(--text-muted);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      padding: 2px 6px;
+    }
+
+    .project-card__learned {
+      font-size: var(--font-size-xs);
+      color: var(--text-muted);
+      line-height: 1.6;
+      border-top: 1px solid var(--border-color);
+      padding-top: var(--spacing-sm);
+    }
+
+    .project-card__link {
+      font-size: var(--font-size-sm);
+      color: var(--accent-green);
+      font-weight: 500;
+      transition: opacity var(--transition-fast);
+    }
+
+    .project-card__link:hover {
+      opacity: 0.75;
+    }
+
+    /* Work grid */
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--spacing-lg);
+    }
+
+    .work-card {
+      background: var(--bg-primary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: var(--spacing-lg);
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-xs);
+    }
+
+    .work-card__company {
+      font-size: var(--font-size-base);
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .work-card__role {
+      font-size: var(--font-size-sm);
+      color: var(--accent-green);
+      margin-bottom: var(--spacing-xs);
+    }
+
+    .work-card__desc {
+      font-size: var(--font-size-sm);
+      color: var(--text-secondary);
+      line-height: 1.65;
+      flex: 1;
+    }
+
+    .work-card__link {
+      font-size: var(--font-size-sm);
+      color: var(--accent-green);
+      font-weight: 500;
+      margin-top: var(--spacing-xs);
+      transition: opacity var(--transition-fast);
+    }
+
+    .work-card__link:hover {
+      opacity: 0.75;
+    }
+
+    @media (max-width: 768px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .work-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     /* Beyond Work Teasers */
@@ -253,6 +435,8 @@
     }
   </style>
 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=National+Park:wght@600&text=James%20Burney&display=swap">
+
   <!-- Theme toggle (load early to prevent flash) -->
   <script src="/js/theme-toggle.js"></script>
 
@@ -276,7 +460,12 @@
   <!-- Header -->
   <header class="header">
     <div class="header__inner">
-      <a href="/" class="header__logo">James Burney</a>
+      <a href="/" class="header__logo">
+        <svg width="12" height="30" viewBox="0 0 14 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M1,3.5 L2.5,1.5 L4,2.5 L5.5,1 L7,2 L8.5,1 L10,2 L11.5,1.5 L13,3.5 L13,28.5 L11.5,30.5 L10,29.5 L8.5,31 L7,30 L5.5,31 L4,29.5 L2.5,30.5 L1,28.5 Z" fill="white"/>
+        </svg>
+        <span style="font-family: 'National Park', sans-serif; font-weight: 600; font-size: 20px; letter-spacing: 0.03em;">James Burney</span>
+      </a>
 
       <nav class="header__nav">
         <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false">
@@ -289,27 +478,26 @@
           <li><a href="/" class="nav__link nav__link--active" data-page="home">Home</a></li>
           <li><a href="/pages/experience.html" class="nav__link" data-page="experience">Experience</a></li>
           <li><a href="/pages/projects.html" class="nav__link" data-page="projects">Projects</a></li>
-          <li><a href="/pages/beyond-work.html" class="nav__link" data-page="beyond-work">Beyond Work</a></li>
+          <li><a href="/pages/about.html" class="nav__link" data-page="about">About Me</a></li>
+          <li class="nav__theme-toggle">
+            <button class="theme-toggle" aria-label="Switch to light mode">
+              <svg class="theme-toggle__icon theme-toggle__sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+              <svg class="theme-toggle__icon theme-toggle__moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+            </button>
+          </li>
         </ul>
-
-        <button class="theme-toggle" aria-label="Switch to light mode">
-          <!-- Sun icon (shown in dark mode) -->
-          <svg class="theme-toggle__icon theme-toggle__sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-          </svg>
-          <!-- Moon icon (shown in light mode) -->
-          <svg class="theme-toggle__icon theme-toggle__moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
-        </button>
       </nav>
     </div>
   </header>
@@ -318,11 +506,57 @@
   <main>
     <!-- Hero Section -->
     <section class="hero hero--home">
-      <!-- Subtle terrain texture -->
-      <svg class="hero__bg-texture" viewBox="0 0 1200 400" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,300 Q50,280 100,290 T200,270 T300,285 T400,260 T500,275 T600,250 T700,265 T800,240 T900,255 T1000,230 T1100,245 T1200,220" fill="none" stroke="currentColor" stroke-width="2"/>
-        <path d="M0,320 Q75,300 150,310 T300,295 T450,305 T600,280 T750,295 T900,270 T1050,285 T1200,260" fill="none" stroke="currentColor" stroke-width="1.5"/>
-        <path d="M0,340 Q100,325 200,335 T400,315 T600,325 T800,305 T1000,320 T1200,300" fill="none" stroke="currentColor" stroke-width="1"/>
+      <!--
+        Hero background: layered topo texture.
+        Layer 1: Concentric contour-line clusters (decorative, accent green at low opacity).
+        Layer 2: Accurate Appalachian Trail elevation profile (Springer GA → Katahdin ME).
+        Profile anchored to real elevation landmarks: Clingmans Dome (highest, mile 199),
+        Bear Mountain NY (lowest, mile 1408), Mt Washington (mile 1856), Katahdin (finish).
+        Elevation data sourced from Whiteblaze public section data + general AT references.
+      -->
+      <svg class="hero__bg-texture hero__bg-contours" viewBox="0 0 800 240" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <g fill="none" stroke="currentColor" stroke-width="1">
+          <!-- Cluster 1: top-left, irregular peak -->
+          <path d="M 95 60 Q 130 35, 175 45 Q 220 55, 240 85 Q 235 120, 195 130 Q 145 135, 110 115 Q 80 90, 95 60 Z"/>
+          <path d="M 110 65 Q 140 45, 175 52 Q 210 62, 225 87 Q 220 112, 190 120 Q 150 125, 122 110 Q 100 90, 110 65 Z"/>
+          <path d="M 125 72 Q 150 55, 175 60 Q 200 68, 210 88 Q 205 105, 185 110 Q 155 115, 132 105 Q 118 92, 125 72 Z"/>
+          <path d="M 140 80 Q 160 68, 178 72 Q 195 78, 198 90 Q 195 100, 178 102 Q 160 105, 145 100 Q 135 92, 140 80 Z"/>
+          <path d="M 155 88 Q 168 82, 180 85 Q 188 90, 185 95 Q 175 99, 162 96 Q 152 92, 155 88 Z"/>
+          <!-- Cluster 2: mid-right, elongated ridge -->
+          <path d="M 510 100 Q 580 75, 660 90 Q 720 110, 715 145 Q 690 175, 615 175 Q 540 170, 505 145 Q 490 120, 510 100 Z"/>
+          <path d="M 525 108 Q 585 88, 650 100 Q 700 118, 695 142 Q 675 165, 615 165 Q 555 162, 525 142 Q 515 122, 525 108 Z"/>
+          <path d="M 545 118 Q 595 102, 640 112 Q 678 125, 672 142 Q 658 158, 615 158 Q 572 155, 548 140 Q 540 128, 545 118 Z"/>
+          <path d="M 565 128 Q 600 118, 630 125 Q 655 135, 650 145 Q 638 152, 615 152 Q 590 150, 570 142 Q 562 135, 565 128 Z"/>
+          <!-- Cluster 3: top-right small peak -->
+          <path d="M 700 25 Q 735 15, 765 30 Q 778 50, 760 65 Q 730 70, 705 60 Q 690 45, 700 25 Z"/>
+          <path d="M 712 32 Q 738 25, 758 35 Q 770 48, 755 58 Q 732 62, 715 55 Q 705 45, 712 32 Z"/>
+          <path d="M 725 42 Q 742 38, 752 45 Q 758 52, 748 56 Q 735 58, 725 53 Q 720 47, 725 42 Z"/>
+          <!-- Cluster 4: bottom-left wide hill -->
+          <path d="M 20 195 Q 75 175, 145 185 Q 200 200, 195 220 Q 175 235, 110 238 Q 50 235, 15 218 Q 5 205, 20 195 Z"/>
+          <path d="M 35 202 Q 85 188, 138 195 Q 180 208, 175 220 Q 160 230, 110 230 Q 60 228, 32 218 Q 25 208, 35 202 Z"/>
+          <path d="M 55 210 Q 90 200, 130 206 Q 160 215, 155 222 Q 140 226, 110 226 Q 80 224, 58 218 Q 50 213, 55 210 Z"/>
+          <!-- Cluster 5: mid-top irregular ridge -->
+          <path d="M 320 18 Q 360 8, 400 22 Q 425 40, 415 58 Q 380 70, 340 65 Q 305 50, 320 18 Z"/>
+          <path d="M 335 28 Q 365 20, 395 30 Q 412 38, 405 52 Q 378 60, 345 56 Q 322 45, 335 28 Z"/>
+          <path d="M 348 38 Q 370 32, 388 38 Q 398 47, 392 53 Q 375 57, 355 55 Q 340 48, 348 38 Z"/>
+          <!-- Cluster 6: small mid-left bump -->
+          <path d="M 240 155 Q 268 148, 290 160 Q 298 175, 282 185 Q 258 188, 238 178 Q 230 165, 240 155 Z"/>
+          <path d="M 250 162 Q 270 156, 285 165 Q 290 175, 278 180 Q 260 182, 245 174 Q 240 167, 250 162 Z"/>
+        </g>
+      </svg>
+      <svg class="hero__bg-texture hero__bg-profile" viewBox="0 0 800 240" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <!--
+          AT elevation profile (south to north). Coordinates derived from real landmark
+          elevations: Springer 3782ft, Blood Mtn 4461ft, Standing Indian 5498ft, Wayah
+          Bald 5342ft, Fontana 1800ft, Clingmans 6643ft, Max Patch 4629ft, Hot Springs
+          1326ft, Roan 6285ft, Damascus 1928ft, Grayson Highlands 5500ft, McAfee 3200ft,
+          Shenandoah 4050ft, Harpers Ferry 270ft, Bear Mtn 124ft, Greylock 3491ft,
+          Killington 4229ft, Moosilauke 4802ft, Lafayette 5260ft, Mt Washington 6288ft,
+          Mahoosuc 2200ft, Saddleback 4121ft, Bigelows 4150ft, 100-Mile rolling 1500ft,
+          Katahdin 5268ft.
+        -->
+        <path d="M 0 220 L 0 108 L 6 92 L 11 67 L 17 88 L 23 100 L 30 70 L 36 95 L 41 60 L 50 50 L 60 213 L 73 20 L 84 30 L 87 75 L 92 80 L 100 220 L 100 168 L 138 26 L 157 70 L 171 205 L 183 200 L 193 78 L 256 116 L 280 75 L 318 90 L 339 110 L 373 213 L 411 152 L 470 218 L 520 220 L 581 100 L 621 60 L 645 75 L 654 32 L 676 156 L 700 78 L 727 76 L 755 168 L 800 60 L 800 240 L 0 240 Z" fill="currentColor"/>
+        <path d="M 0 108 L 6 92 L 11 67 L 17 88 L 23 100 L 30 70 L 36 95 L 41 60 L 50 50 L 60 213 L 73 20 L 84 30 L 87 75 L 92 80 L 100 220 L 100 168 L 138 26 L 157 70 L 171 205 L 183 200 L 193 78 L 256 116 L 280 75 L 318 90 L 339 110 L 373 213 L 411 152 L 470 218 L 520 220 L 581 100 L 621 60 L 645 75 L 654 32 L 676 156 L 700 78 L 727 76 L 755 168 L 800 60" fill="none" stroke="currentColor" stroke-width="1.5"/>
       </svg>
 
       <div class="container">
@@ -330,83 +564,133 @@
           <p class="hero__label">Product Manager</p>
           <h1 class="hero__title">James Burney</h1>
           <p class="hero__pitch">
-            Product manager with a decade of experience building digital products at The Motley Fool, Zillow Group, and Merkle. I bring a systems-thinking approach to solving user problems.
+            I built products at Zillow and The Motley Fool, took 2023 to hike the Appalachian Trail end to end, and have spent the time since consulting and building things on my own. Now I'm looking for what's next.
           </p>
-          <a href="/pages/projects.html" class="btn btn--primary">
-            See My Projects
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Experience Strip -->
-    <section class="section section--tight">
-      <div class="container">
-        <div class="content-container">
-          <div class="experience-strip animate-on-scroll">
-            <div class="experience-strip__item">
-              <span class="experience-strip__company">The Motley Fool</span>
-              <span class="experience-strip__title">Product Lead</span>
-            </div>
-            <div class="experience-strip__divider" aria-hidden="true"></div>
-            <div class="experience-strip__item">
-              <span class="experience-strip__company">Zillow Group (HotPads)</span>
-              <span class="experience-strip__title">Product Manager, SEO</span>
-            </div>
-            <div class="experience-strip__divider" aria-hidden="true"></div>
-            <div class="experience-strip__item">
-              <span class="experience-strip__company">Merkle</span>
-              <span class="experience-strip__title">Sr SEO Account Manager</span>
-            </div>
-            <div class="experience-strip__divider" aria-hidden="true"></div>
-            <a href="/pages/experience.html" class="experience-strip__link">View full experience &rarr;</a>
+          <div style="display: flex; gap: var(--spacing-md); flex-wrap: wrap;">
+            <a href="/pages/projects.html" class="btn btn--primary">
+              View Projects
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="/pages/experience.html" class="btn btn--secondary">
+              View Experience
+            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Featured Projects -->
+    <!-- Logo Bar -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="content-container">
+          <p class="logo-bar__label">Experience at</p>
+          <div class="logo-bar animate-on-scroll">
+            <a href="/pages/experience.html" class="logo-bar__item logo-bar__item--zillow" aria-label="Zillow Group">
+              <img src="/images/logos/zillow-logo.svg" alt="Zillow">
+            </a>
+            <a href="/pages/experience.html" class="logo-bar__item logo-bar__item--motley-fool" aria-label="The Motley Fool">
+              <img src="/images/logos/motley-fool-logo.svg" alt="The Motley Fool">
+            </a>
+            <a href="/pages/experience.html" class="logo-bar__item logo-bar__item--merkle" aria-label="Merkle">
+              <img src="/images/logos/merkle-logo.svg" alt="Merkle">
+            </a>
+            <a href="/pages/experience.html" class="logo-bar__link">Full experience &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
     <section class="section">
       <div class="container">
         <div class="content-container">
-          <h2 class="animate-on-scroll">Featured Projects</h2>
-          <div class="featured-grid" style="margin-top: var(--spacing-xl);">
+          <p class="section__label animate-on-scroll">Projects</p>
+          <h2 class="section__heading animate-on-scroll">What I've been building</h2>
+          <p class="section__sub animate-on-scroll">The past year has been less about job titles and more about actually shipping things. Here's what I've been working on.</p>
+          <div class="projects-grid animate-on-scroll">
 
-            <a href="/pages/projects.html" class="card featured-card animate-on-scroll">
-              <div class="featured-card__header">
-                <h3 class="card__title" style="margin-bottom: 0;">What Mile?</h3>
-                <span class="featured-card__status featured-card__status--live">Live</span>
+            <!-- What Mile? -->
+            <div class="project-card">
+              <div class="project-card__top">
+                <h3 class="project-card__title">What Mile?</h3>
+                <span class="project-card__status project-card__status--live">Live</span>
               </div>
-              <p class="card__description" style="margin-bottom: 0;">Interactive geospatial guessing game for the Appalachian Trail. Players identify locations on a map with scoring based on trail-mile accuracy.</p>
-            </a>
+              <p class="project-card__desc">Geospatial guessing game for the Appalachian Trail. Players identify a location from a photo, scored by how close they get in trail miles.</p>
+              <div class="project-card__tech">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Leaflet</span>
+                <span class="tech-tag">Claude Code</span>
+              </div>
+              <p class="project-card__learned"><strong>Learned:</strong> Geospatial UX on mobile is harder than it looks. Every interaction had to be rethought.</p>
+              <a href="https://what-mile.vercel.app" class="project-card__link" target="_blank" rel="noopener noreferrer">View project &rarr;</a>
+            </div>
 
-            <a href="/pages/projects.html" class="card featured-card animate-on-scroll">
-              <div class="featured-card__header">
-                <h3 class="card__title" style="margin-bottom: 0;">Tiny Doodle</h3>
-                <span class="featured-card__status featured-card__status--live">Live</span>
+            <!-- Tiny Doodle -->
+            <div class="project-card">
+              <div class="project-card__top">
+                <h3 class="project-card__title">Tiny Doodle</h3>
+                <span class="project-card__status project-card__status--live">Live</span>
               </div>
-              <p class="card__description" style="margin-bottom: 0;">AI-powered creative drawing app for children with daily prompts. Built with React, designed for COPPA compliance.</p>
-            </a>
+              <p class="project-card__desc">A drawing app for kids with daily creative prompts. COPPA-compliant, minimal interface, designed so a five-year-old can figure it out immediately.</p>
+              <div class="project-card__tech">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Canvas API</span>
+                <span class="tech-tag">PWA</span>
+              </div>
+              <p class="project-card__learned"><strong>Learned:</strong> Designing for children means ruthless simplicity. Every feature needs to pass the five-year-old test.</p>
+              <a href="https://tinydoodle.app" class="project-card__link" target="_blank" rel="noopener noreferrer">View project &rarr;</a>
+            </div>
 
-            <a href="/pages/projects.html" class="card featured-card animate-on-scroll">
-              <div class="featured-card__header">
-                <h3 class="card__title" style="margin-bottom: 0;">Carbon Tracker</h3>
-                <span class="featured-card__status featured-card__status--development">In Development</span>
+            <!-- Carbon Tracker -->
+            <div class="project-card">
+              <div class="project-card__top">
+                <h3 class="project-card__title">Carbon Tracker</h3>
+                <span class="project-card__status project-card__status--development">In beta</span>
               </div>
-              <p class="card__description" style="margin-bottom: 0;">Browser widget helping users understand their web browsing carbon footprint through data visualization and behavioral insights.</p>
-            </a>
+              <p class="project-card__desc">Browser widget that helps users understand the carbon footprint of their web browsing, through data visualization and behavioral nudges.</p>
+              <div class="project-card__tech">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">Webpack</span>
+              </div>
+              <p class="project-card__learned"><strong>Learned:</strong> Carbon data is messy. Building trust in the numbers matters as much as the numbers themselves.</p>
+              <a href="https://jiburney.github.io/carbon-tracker-landing/" class="project-card__link" target="_blank" rel="noopener noreferrer">View landing page &rarr;</a>
+            </div>
 
-            <a href="/pages/projects.html" class="card featured-card animate-on-scroll">
-              <div class="featured-card__header">
-                <h3 class="card__title" style="margin-bottom: 0;">jamesburney.com</h3>
-                <span class="featured-card__status featured-card__status--live">Live</span>
-              </div>
-              <p class="card__description" style="margin-bottom: 0;">This site — vanilla HTML/CSS/JS, no frameworks. Dark mode, service worker, low-power mode, accessibility-first.</p>
-            </a>
+
+          </div>
+          <div style="text-align: center; margin-top: var(--spacing-xl);">
+            <a href="/pages/projects.html" class="btn btn--secondary">View all projects &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Selected Work -->
+    <section class="section" style="background-color: var(--bg-secondary);">
+      <div class="container">
+        <div class="content-container">
+          <p class="section__label animate-on-scroll">Selected work</p>
+          <h2 class="section__heading animate-on-scroll">A couple of highlights from the career</h2>
+          <p class="section__sub animate-on-scroll">Five years across real estate, fintech, and digital media. Full story on the experience page.</p>
+          <div class="work-grid animate-on-scroll">
+
+            <div class="work-card">
+              <div class="work-card__company">Zillow Group / HotPads</div>
+              <div class="work-card__role">Senior Product Manager</div>
+              <p class="work-card__desc">Every property page on HotPads was making 10 separate calls just to load its SEO links. I built a unified API that collapsed that to one — cleaner, faster, and a lot easier to maintain going forward.</p>
+              <a href="/pages/experience.html" class="work-card__link">Full experience &rarr;</a>
+            </div>
+
+            <div class="work-card">
+              <div class="work-card__company">The Motley Fool</div>
+              <div class="work-card__role">Product Lead</div>
+              <p class="work-card__desc">The Motley Fool had never really focused on a free product. I was selected to lead it, taking it from a blank page through discovery, prototypes, and executive buy-in to a fully defined product ready to build.</p>
+              <a href="/pages/experience.html" class="work-card__link">Full experience &rarr;</a>
+            </div>
 
           </div>
         </div>
@@ -414,9 +698,9 @@
     </section>
 
     <!-- Beyond Work Teasers -->
-    <section class="section" style="background-color: var(--bg-secondary);">
+    <section class="section">
       <div class="container">
-        <a href="/pages/beyond-work.html" style="text-decoration: none; color: inherit;">
+        <a href="/pages/about.html" style="text-decoration: none; color: inherit;">
           <div class="teaser-row">
             <div class="card teaser-card animate-on-scroll">
               <div class="teaser-card__number">2,190</div>
@@ -424,7 +708,7 @@
               <p class="teaser-card__sub">Georgia &rarr; Maine, 2023</p>
             </div>
             <div class="card teaser-card animate-on-scroll">
-              <div class="teaser-card__number">50+</div>
+              <div class="teaser-card__number">20+</div>
               <p class="teaser-card__label">Countries explored</p>
               <p class="teaser-card__sub">Geography nerd</p>
             </div>
@@ -438,30 +722,21 @@
       </div>
     </section>
 
-    <!-- Contact Strip -->
+    <!-- Contact -->
     <section class="section">
       <div class="container">
-        <div class="contact-strip animate-on-scroll">
-          <h2 class="contact-strip__heading">Want to connect?</h2>
-          <div class="contact-strip__links">
-            <a href="https://linkedin.com/in/jiburney" class="contact-strip__link" target="_blank" rel="noopener noreferrer">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-              </svg>
-              LinkedIn
-            </a>
-            <a href="mailto:james@jamesburney.com" class="contact-strip__link">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <div class="content-container">
+          <div class="contact-strip animate-on-scroll">
+            <h2 class="contact-strip__heading">Let's talk</h2>
+            <p style="color: var(--text-secondary); max-width: 540px; margin: 0 auto var(--spacing-xl);">
+              I like building things -- products, digital experiences, ideas that don't have a shape yet. If you have a product role, a web project, or something you want help bringing to life, let's talk. And if you want to compare notes on trails, climate, geography, or beer, I'm always up for that too.
+            </p>
+            <a href="mailto:james@jamesburney.com" class="btn btn--primary">
+              Get in touch
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                 <polyline points="22,6 12,13 2,6"></polyline>
               </svg>
-              Email
-            </a>
-            <a href="https://github.com/jiburney" class="contact-strip__link" target="_blank" rel="noopener noreferrer">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-              </svg>
-              GitHub
             </a>
           </div>
         </div>
@@ -475,14 +750,7 @@
       <div class="footer__inner">
         <!-- Sustainability Badges -->
         <div class="footer__badges">
-          <a href="https://www.websitecarbon.com/website/jamesburney-com/" class="footer__badge" target="_blank" rel="noopener noreferrer">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-              <path d="M2 17l10 5 10-5"></path>
-              <path d="M2 12l10 5 10-5"></path>
-            </svg>
-            Website Carbon
-          </a>
+          <div id="wcb" class="carbonbadge wcb-d"></div>
           <a href="https://www.thegreenwebfoundation.org/green-web-check/?url=jamesburney.com" class="footer__badge" target="_blank" rel="noopener noreferrer">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="10"></circle>
@@ -534,5 +802,6 @@
   <!-- Scripts (deferred for performance) -->
   <script src="/js/main.js" defer></script>
   <script src="/js/low-power-mode.js" defer></script>
+  <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
 </body>
 </html>

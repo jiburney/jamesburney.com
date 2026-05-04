@@ -44,3 +44,15 @@ temp/
 Thumbs.db
 ehthumbs.db
 Desktop.ini
+
+# AI agent session state
+.claude/
+
+# Archived planning documents
+docs/archive/
+
+# Python (in case)
+venv/
+.venv/
+__pycache__/
+*.pyc

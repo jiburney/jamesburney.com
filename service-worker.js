@@ -3,6 +3,13 @@
  * Provides offline caching and improved performance
  */
 
+// Bypass all caching on localhost for easier development
+if (self.location.hostname === 'localhost' || self.location.hostname === '127.0.0.1') {
+  self.addEventListener('fetch', (event) => {
+    event.respondWith(fetch(event.request));
+  });
+} else {
+
 const CACHE_NAME = 'jamesburney-v1';
 const OFFLINE_URL = '/offline.html';
 
@@ -168,3 +175,5 @@ self.addEventListener('sync', (event) => {
     );
   }
 });
+
+} // end localhost bypass

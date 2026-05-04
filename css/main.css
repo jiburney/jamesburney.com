@@ -197,12 +197,18 @@ small {
    ========================================================================== */
 
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: var(--z-sticky);
   background-color: var(--bg-primary);
   border-bottom: 1px solid var(--border-color);
   transition: background-color var(--transition-base), border-color var(--transition-base);
+}
+
+main {
+  padding-top: var(--nav-height);
 }
 
 .header__inner {
@@ -216,14 +222,16 @@ small {
 }
 
 .header__logo {
-  font-size: var(--font-size-xl);
-  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   color: var(--text-primary);
   text-decoration: none;
-  transition: color var(--transition-fast);
+  transition: opacity var(--transition-fast);
 }
 
 .header__logo:hover {
+  opacity: 0.8;
   color: var(--accent-green);
 }
 
@@ -231,12 +239,23 @@ small {
   display: flex;
   align-items: center;
   gap: var(--spacing-xl);
+  height: 100%;
 }
 
 .nav__list {
   display: flex;
   list-style: none;
   gap: var(--spacing-lg);
+  align-items: center;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__list > li {
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 .nav__link {
@@ -244,7 +263,7 @@ small {
   font-weight: 500;
   color: var(--text-secondary);
   text-decoration: none;
-  padding: var(--spacing-sm) 0;
+  padding: var(--spacing-xs) var(--spacing-sm);
   position: relative;
   transition: color var(--transition-fast);
 }
@@ -394,6 +413,13 @@ small {
   color: var(--accent-green);
 }
 
+/* nav__theme-toggle — wraps the button in the nav list */
+.nav__theme-toggle {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
 /* ==========================================================================
    Hero Section
    ========================================================================== */
@@ -423,6 +449,37 @@ small {
   color: var(--text-secondary);
   max-width: 600px;
   margin-bottom: var(--spacing-xl);
+}
+
+/* Interior page hero — tighter padding than the homepage hero */
+.hero--page {
+  padding: var(--spacing-xl) 0 var(--spacing-md);
+}
+
+.hero--page .hero__title {
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--spacing-sm);
+}
+
+.hero--page .hero__tagline {
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--spacing-xs);
+}
+
+.hero--page .hero__description {
+  margin-bottom: 0;
+}
+
+/* Remove top padding from first content section after an interior hero */
+.hero--page + .section,
+.hero--page + .section--tight {
+  padding-top: var(--spacing-lg);
+}
+
+@media (max-width: 768px) {
+  .hero--page {
+    padding: var(--spacing-lg) 0 var(--spacing-sm);
+  }
 }
 
 /* ==========================================================================
@@ -621,7 +678,6 @@ small {
   padding: var(--spacing-2xl) 0;
   border-top: 1px solid var(--border-color);
   background-color: var(--bg-secondary);
-  margin-top: var(--spacing-4xl);
 }
 
 .footer__inner {
@@ -783,30 +839,59 @@ body.low-power-mode * {
     display: flex;
   }
 
+  /* Reset desktop height stretching for mobile overlay */
+  .nav__list,
+  .nav__list > li {
+    height: auto;
+  }
+
+  /* Mobile nav overlay — hidden by default */
   .nav__list {
+    display: none;
+  }
+
+  /* Mobile nav overlay — open state */
+  .nav__list.is-open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--spacing-xl);
+
     position: fixed;
     top: var(--nav-height);
     left: 0;
-    right: 0;
-    bottom: 0;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: var(--spacing-xl);
-    background-color: var(--bg-primary);
-    opacity: 0;
-    visibility: hidden;
-    transition: all var(--transition-base);
+    width: 100vw;
+    height: calc(100vh - var(--nav-height));
+
+    /* Solid background — hardcoded to avoid variable cascade issues */
+    background-color: #0d1117;
+
+    padding: var(--spacing-3xl) var(--spacing-md) var(--spacing-2xl);
     z-index: var(--z-overlay);
+    overflow-y: auto;
   }
 
-  .nav__list.is-open {
-    opacity: 1;
-    visibility: visible;
+  [data-theme="light"] .nav__list.is-open {
+    background-color: #f6f8fa;
+  }
+
+  .nav__list.is-open li {
+    list-style: none;
   }
 
   .nav__link {
     font-size: var(--font-size-xl);
+    color: var(--text-primary);
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
+  .nav__theme-toggle {
+    margin-top: auto;
+  }
+
+  .nav__theme-toggle .theme-toggle {
+    display: flex;
   }
 
   .nav__dropdown-menu {

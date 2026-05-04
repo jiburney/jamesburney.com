@@ -195,7 +195,7 @@
       'home': { lat: '38.8816', lng: '-77.0910', name: 'Arlington, VA' },
       'experience': { lat: '37.5407', lng: '-77.4360', name: 'Richmond, VA' },
       'projects': { lat: '37.7749', lng: '-122.4194', name: 'San Francisco, CA' },
-      'beyond-work': { lat: '35.7796', lng: '-83.9207', name: 'Clingmans Dome, AT' }
+      'about': { lat: '35.7796', lng: '-83.9207', name: 'Clingmans Dome, AT' }
     };
 
     const navLinks = document.querySelectorAll('.nav__link[data-page]');
@@ -308,6 +308,27 @@
   }
 
   // ==========================================================================
+  // Website Carbon Badge — sync dark/light class to theme
+  // ==========================================================================
+
+  function syncCarbonBadge() {
+    const badge = document.getElementById('wcb');
+    if (!badge) return;
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    badge.classList.toggle('wcb-d', isDark);
+  }
+
+  function initCarbonBadge() {
+    // Run once on load
+    syncCarbonBadge();
+    // Watch for future theme changes via the data-theme attribute
+    new MutationObserver(syncCarbonBadge).observe(
+      document.documentElement,
+      { attributes: true, attributeFilter: ['data-theme'] }
+    );
+  }
+
+  // ==========================================================================
   // Initialize All Modules
   // ==========================================================================
 
@@ -322,6 +343,7 @@
     setActiveNavLink();
     calculatePageWeight();
     registerServiceWorker();
+    initCarbonBadge();
   }
 
   // Run when DOM is ready
