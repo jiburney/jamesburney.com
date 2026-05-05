@@ -10,7 +10,7 @@ if (self.location.hostname === 'localhost' || self.location.hostname === '127.0.
   });
 } else {
 
-const CACHE_NAME = 'jamesburney-v3';
+const CACHE_NAME = 'jamesburney-v4';
 const OFFLINE_URL = '/offline.html';
 
 // Assets to cache immediately on install
@@ -80,8 +80,8 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(
       fetch(event.request)
         .then((response) => {
-          // Cache successful responses for external resources
-          if (response.ok) {
+          // Only cache successful, non-redirected responses
+          if (response.ok && !response.redirected) {
             const responseClone = response.clone();
             caches.open(CACHE_NAME).then((cache) => {
               cache.put(event.request, responseClone);
@@ -97,6 +97,19 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
+  // For navigation requests to extensionless paths, let the browser handle
+  // redirects natively. Safari refuses to consume redirect responses served
+  // by a service worker, so we bypass the SW for these requests entirely.
+  const url = new URL(event.request.url);
+  const isExtensionlessNavigation =
+    event.request.mode === 'navigate' &&
+    !url.pathname.endsWith('/') &&
+    !url.pathname.includes('.');
+
+  if (isExtensionlessNavigation) {
+    return;
+  }
+
   // For local assets, use cache-first strategy
   event.respondWith(
     caches.match(event.request)
@@ -106,7 +119,7 @@ self.addEventListener('fetch', (event) => {
           event.waitUntil(
             fetch(event.request)
               .then((response) => {
-                if (response.ok) {
+                if (response.ok && !response.redirected) {
                   caches.open(CACHE_NAME).then((cache) => {
                     cache.put(event.request, response);
                   });
@@ -122,8 +135,8 @@ self.addEventListener('fetch', (event) => {
         // Not in cache, fetch from network
         return fetch(event.request)
           .then((response) => {
-            // Don't cache non-successful responses
-            if (!response.ok) {
+            // Don't cache non-successful or redirected responses
+            if (!response.ok || response.redirected) {
               return response;
             }
 
