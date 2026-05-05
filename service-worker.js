@@ -10,18 +10,17 @@ if (self.location.hostname === 'localhost' || self.location.hostname === '127.0.
   });
 } else {
 
-const CACHE_NAME = 'jamesburney-v5';
+const CACHE_NAME = 'jamesburney-v6';
 const OFFLINE_URL = '/offline.html';
 
 // Assets to cache immediately on install.
-// Note: we precache clean URLs (e.g., /experience) which Cloudflare serves
-// from /experience/index.html. The browser caches them by their request URL,
-// so this matches what visitors will actually navigate to.
+// Note: clean URLs use trailing slashes to match the canonical paths
+// Cloudflare Pages serves (e.g., /experience/ -> experience/index.html).
 const PRECACHE_ASSETS = [
   '/',
-  '/experience',
-  '/projects',
-  '/about',
+  '/experience/',
+  '/projects/',
+  '/about/',
   '/css/main.css',
   '/css/themes.css',
   '/js/main.js',

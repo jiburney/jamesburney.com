@@ -11,7 +11,7 @@
 
   <!-- Experience Page -->
   <url>
-    <loc>https://jamesburney.com/experience</loc>
+    <loc>https://jamesburney.com/experience/</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -19,7 +19,7 @@
 
   <!-- Projects Page -->
   <url>
-    <loc>https://jamesburney.com/projects</loc>
+    <loc>https://jamesburney.com/projects/</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -27,7 +27,7 @@
 
   <!-- About Page -->
   <url>
-    <loc>https://jamesburney.com/about</loc>
+    <loc>https://jamesburney.com/about/</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

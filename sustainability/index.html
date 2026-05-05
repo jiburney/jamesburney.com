@@ -10,22 +10,22 @@
   <meta name="description" content="How this website was built with sustainability in mind. Technical decisions and environmental impact.">
   <meta name="keywords" content="sustainable web design, green web, eco-friendly website">
   <meta name="author" content="James Burney">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="noindex, nofollow">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://jamesburney.com/sustainability">
+  <meta property="og:url" content="https://jamesburney.com/sustainability/">
   <meta property="og:title" content="Sustainable Web Design | James Burney">
   <meta property="og:description" content="How this website was built with sustainability in mind.">
   <meta property="og:image" content="https://jamesburney.com/images/og-image.jpg">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://jamesburney.com/sustainability">
+  <meta property="twitter:url" content="https://jamesburney.com/sustainability/">
   <meta property="twitter:title" content="Sustainable Web Design | James Burney">
 
   <!-- Additional Meta -->
-  <link rel="canonical" href="https://jamesburney.com/sustainability">
+  <link rel="canonical" href="https://jamesburney.com/sustainability/">
   <meta name="theme-color" content="#0d1117">
 
   <!-- Favicon -->
@@ -182,34 +182,29 @@
         </button>
 
         <ul class="nav__list">
-          <li><a href="/pages/experience.html" class="nav__link" data-page="experience">Experience</a></li>
-          <li><a href="/pages/projects.html" class="nav__link" data-page="projects">Projects</a></li>
-          <li><a href="/pages/wanderings.html" class="nav__link" data-page="wanderings">Wanderings</a></li>
-          <li><a href="/pages/hobbies.html" class="nav__link" data-page="hobbies">Hobbies</a></li>
-          <li class="nav__dropdown">
-            <span class="nav__link nav__dropdown-trigger nav__link--active" data-page="more">More</span>
-            <div class="nav__dropdown-menu">
-              <a href="/pages/sustainability.html" class="nav__dropdown-item">Sustainability</a>
-            </div>
+          <li><a href="/" class="nav__link" data-page="home">Home</a></li>
+          <li><a href="/experience/" class="nav__link" data-page="experience">Experience</a></li>
+          <li><a href="/projects/" class="nav__link" data-page="projects">Projects</a></li>
+          <li><a href="/about/" class="nav__link" data-page="about">About Me</a></li>
+          <li class="nav__theme-toggle">
+            <button class="theme-toggle" aria-label="Switch to light mode">
+              <svg class="theme-toggle__icon theme-toggle__sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+              <svg class="theme-toggle__icon theme-toggle__moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+            </button>
           </li>
         </ul>
-
-        <button class="theme-toggle" aria-label="Switch to light mode">
-          <svg class="theme-toggle__icon theme-toggle__sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-          </svg>
-          <svg class="theme-toggle__icon theme-toggle__moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
-        </button>
       </nav>
     </div>
   </header>
