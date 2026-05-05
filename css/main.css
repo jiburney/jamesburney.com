@@ -698,19 +698,11 @@ main {
 .footer__badge {
   display: inline-flex;
   align-items: center;
-  gap: var(--spacing-sm);
-  padding: var(--spacing-sm) var(--spacing-md);
-  font-size: var(--font-size-sm);
-  color: var(--text-secondary);
-  background-color: var(--bg-primary);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-md);
-  transition: all var(--transition-fast);
+  transition: opacity var(--transition-fast);
 }
 
 .footer__badge:hover {
-  border-color: var(--accent-green);
-  color: var(--accent-green);
+  opacity: 0.8;
 }
 
 .footer__links {
