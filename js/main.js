@@ -299,27 +299,6 @@
   }
 
   // ==========================================================================
-  // Website Carbon Badge — sync dark/light class to theme
-  // ==========================================================================
-
-  function syncCarbonBadge() {
-    const badge = document.getElementById('wcb');
-    if (!badge) return;
-    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-    badge.classList.toggle('wcb-d', isDark);
-  }
-
-  function initCarbonBadge() {
-    // Run once on load
-    syncCarbonBadge();
-    // Watch for future theme changes via the data-theme attribute
-    new MutationObserver(syncCarbonBadge).observe(
-      document.documentElement,
-      { attributes: true, attributeFilter: ['data-theme'] }
-    );
-  }
-
-  // ==========================================================================
   // Initialize All Modules
   // ==========================================================================
 
@@ -334,7 +313,6 @@
     setActiveNavLink();
     calculatePageWeight();
     registerServiceWorker();
-    initCarbonBadge();
   }
 
   // Run when DOM is ready
