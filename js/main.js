@@ -284,18 +284,13 @@
     const currentPath = window.location.pathname;
     const navLinks = document.querySelectorAll('.nav__link');
 
+    // Normalize a path: strip trailing slash, treat empty as '/'
+    const normalize = (path) => path.replace(/\/$/, '') || '/';
+
     navLinks.forEach(link => {
       const linkPath = new URL(link.href).pathname;
 
-      // Handle both with and without trailing slashes
-      const normalizedCurrent = currentPath.replace(/\/$/, '') || '/';
-      const normalizedLink = linkPath.replace(/\/$/, '') || '/';
-
-      // Also handle .html extension
-      const currentNoExt = normalizedCurrent.replace('.html', '');
-      const linkNoExt = normalizedLink.replace('.html', '');
-
-      if (currentNoExt === linkNoExt || normalizedCurrent === normalizedLink) {
+      if (normalize(currentPath) === normalize(linkPath)) {
         link.classList.add('nav__link--active');
       } else {
         link.classList.remove('nav__link--active');

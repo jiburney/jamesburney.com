@@ -10,21 +10,23 @@ if (self.location.hostname === 'localhost' || self.location.hostname === '127.0.
   });
 } else {
 
-const CACHE_NAME = 'jamesburney-v4';
+const CACHE_NAME = 'jamesburney-v5';
 const OFFLINE_URL = '/offline.html';
 
-// Assets to cache immediately on install
+// Assets to cache immediately on install.
+// Note: we precache clean URLs (e.g., /experience) which Cloudflare serves
+// from /experience/index.html. The browser caches them by their request URL,
+// so this matches what visitors will actually navigate to.
 const PRECACHE_ASSETS = [
   '/',
-  '/index.html',
+  '/experience',
+  '/projects',
+  '/about',
   '/css/main.css',
   '/css/themes.css',
   '/js/main.js',
   '/js/theme-toggle.js',
   '/js/low-power-mode.js',
-  '/pages/experience.html',
-  '/pages/projects.html',
-  '/pages/about.html',
   '/data/metadata.json',
   '/data/projects.json',
   '/data/travels.json',
@@ -94,19 +96,6 @@ self.addEventListener('fetch', (event) => {
           return caches.match(event.request);
         })
     );
-    return;
-  }
-
-  // For navigation requests to extensionless paths, let the browser handle
-  // redirects natively. Safari refuses to consume redirect responses served
-  // by a service worker, so we bypass the SW for these requests entirely.
-  const url = new URL(event.request.url);
-  const isExtensionlessNavigation =
-    event.request.mode === 'navigate' &&
-    !url.pathname.endsWith('/') &&
-    !url.pathname.includes('.');
-
-  if (isExtensionlessNavigation) {
     return;
   }
 

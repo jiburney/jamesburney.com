@@ -4,30 +4,30 @@
   <!-- Home Page -->
   <url>
     <loc>https://jamesburney.com/</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-05-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- Experience Page -->
   <url>
-    <loc>https://jamesburney.com/pages/experience.html</loc>
-    <lastmod>2026-04-13</lastmod>
+    <loc>https://jamesburney.com/experience</loc>
+    <lastmod>2026-05-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Projects Page -->
   <url>
-    <loc>https://jamesburney.com/pages/projects.html</loc>
-    <lastmod>2026-04-13</lastmod>
+    <loc>https://jamesburney.com/projects</loc>
+    <lastmod>2026-05-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- About Page -->
   <url>
-    <loc>https://jamesburney.com/pages/about.html</loc>
+    <loc>https://jamesburney.com/about</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
