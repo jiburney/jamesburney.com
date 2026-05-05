@@ -15,7 +15,12 @@
 
   /**
    * Get the user's preferred theme
-   * Priority: localStorage > system preference > dark (default)
+   * Priority: localStorage > dark (default)
+   *
+   * Note: We intentionally don't auto-apply the OS color scheme preference.
+   * The site defaults to dark mode for everyone (a small but real energy
+   * savings on OLED screens, plus aesthetic intent), and remembers the
+   * user's choice if they toggle to light mode.
    */
   function getPreferredTheme() {
     // Check localStorage first
@@ -24,12 +29,7 @@
       return storedTheme;
     }
 
-    // Check system preference
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-      return THEMES.LIGHT;
-    }
-
-    // Default to dark
+    // Default to dark for everyone
     return THEMES.DARK;
   }
 
@@ -89,16 +89,6 @@
       document.addEventListener('DOMContentLoaded', setupToggleButton);
     } else {
       setupToggleButton();
-    }
-
-    // Listen for system preference changes
-    if (window.matchMedia) {
-      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-        // Only auto-switch if user hasn't manually set a preference
-        if (!localStorage.getItem(STORAGE_KEY)) {
-          applyTheme(e.matches ? THEMES.DARK : THEMES.LIGHT);
-        }
-      });
     }
   }
 
