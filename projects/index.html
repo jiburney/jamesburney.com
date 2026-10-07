@@ -92,6 +92,7 @@
   </style>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=National+Park:wght@600&text=James%20Burney&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:wght@600&text=Visimply.&display=swap">
 
   <!-- Theme toggle -->
   <script src="/js/theme-toggle.js"></script>
@@ -151,7 +152,7 @@
           <p class="hero__tagline">What I've Been Building</p>
           <h1 class="hero__title">Projects</h1>
           <p class="hero__description" style="max-width: 100%;">
-            A mix of personal experiments, consulting work, and passion projects. I believe in learning by doing—each project here taught me something valuable about product development, user behavior, or technology.
+            A mix of personal experiments, consulting work, and passion projects. I believe in learning by doing, and each project here taught me something valuable about product development, user behavior, or technology.
           </p>
         </div>
       </div>
@@ -161,6 +162,36 @@
     <section class="section">
       <div class="container">
         <div class="grid grid--auto" id="projects-grid">
+
+          <!-- Visimply -->
+          <article class="card project-card animate-on-scroll">
+            <div class="project-card__image" style="background-color: #142239; display: flex; align-items: center; justify-content: center;">
+              <span style="font-family: 'Spectral', Georgia, serif; font-weight: 600; font-size: 2.75rem; color: #F3EEE3;">Visimply<span style="color: #D3A45A;">.</span></span>
+            </div>
+            <div class="project-card__content" style="margin-top: var(--spacing-lg);">
+              <div style="display: flex; align-items: center; gap: var(--spacing-sm); margin-bottom: var(--spacing-sm);">
+                <h3 class="card__title" style="margin-bottom: 0;">Visimply</h3>
+                <span class="project-card__status project-card__status--development">In Development</span>
+              </div>
+              <p class="card__description">
+                Small service businesses don&rsquo;t need more analytics, they need to be told what to do. Visimply connects to Google Search Console and GA4, analyzes the data, and sends a weekly SEO and AEO digest of prioritized actions. No dashboards to interpret, no expertise required.
+              </p>
+              <div class="card__tags">
+                <span class="tag">Python</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">Claude API</span>
+                <span class="tag">GSC/GA4</span>
+              </div>
+              <p class="project-card__learned">
+                <strong>Key learning:</strong> The hard problem isn&rsquo;t the data pipeline. It&rsquo;s knowing which insights are actually worth acting on.
+              </p>
+              <div style="margin-top: var(--spacing-md);">
+                <a href="https://visimply.com" class="btn btn--ghost" target="_blank" rel="noopener noreferrer">
+                  Visit Site &rarr;
+                </a>
+              </div>
+            </div>
+          </article>
 
           <!-- What Mile? -->
           <article class="card project-card animate-on-scroll">
@@ -182,7 +213,7 @@
                 <strong>Key learning:</strong> Making a map game feel intuitive on mobile required rethinking every interaction from scratch.
               </p>
               <div style="margin-top: var(--spacing-md);">
-                <a href="https://what-mile.vercel.app" class="btn btn--ghost" target="_blank" rel="noopener noreferrer">
+                <a href="https://what-mile.app" class="btn btn--ghost" target="_blank" rel="noopener noreferrer">
                   Play the Game &rarr;
                 </a>
               </div>
@@ -233,7 +264,7 @@
                 <span class="tag">Mobile-first</span>
               </div>
               <p class="project-card__learned">
-                <strong>Key learning:</strong> The best features are the ones that get out of the way &mdash; auto-detecting meal time from the clock meant one less thing users had to think about.
+                <strong>Key learning:</strong> The best features are the ones that get out of the way. Auto-detecting meal time from the clock meant one less thing users had to think about.
               </p>
               <div style="margin-top: var(--spacing-md);">
                 <a href="https://food-journal-94k.pages.dev/" class="btn btn--ghost" target="_blank" rel="noopener noreferrer">
@@ -289,33 +320,7 @@
                 <span class="tag">Sustainable Design</span>
               </div>
               <p class="project-card__learned">
-                <strong>Key learning:</strong> Constraints breed creativity. No frameworks forces a deeper understanding of web fundamentals &mdash; and a much lighter page.
-              </p>
-            </div>
-          </article>
-
-          <!-- SEO Insight Engine -->
-          <article class="card project-card animate-on-scroll">
-            <div class="project-card__image" style="background: linear-gradient(135deg, var(--bg-tertiary), var(--border-color)); display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
-              <span style="font-size: 2.5rem;">🔍</span>
-              <span style="font-size: 2.5rem;">🚧</span>
-            </div>
-            <div class="project-card__content" style="margin-top: var(--spacing-lg);">
-              <div style="display: flex; align-items: center; gap: var(--spacing-sm); margin-bottom: var(--spacing-sm);">
-                <h3 class="card__title" style="margin-bottom: 0;">SEO Insight Engine</h3>
-                <span class="project-card__status project-card__status--development">In Development</span>
-              </div>
-              <p class="card__description">
-                Small service businesses don&rsquo;t need more analytics &mdash; they need to be told what to do. This tool connects to Google Search Console and Analytics, runs data analysis, and delivers a weekly email of prioritized actions. No dashboards to interpret, no expertise required.
-              </p>
-              <div class="card__tags">
-                <span class="tag">Python</span>
-                <span class="tag">Pandas</span>
-                <span class="tag">Claude API</span>
-                <span class="tag">GSC/GA</span>
-              </div>
-              <p class="project-card__learned">
-                <strong>Key learning:</strong> The hard problem isn&rsquo;t the data pipeline &mdash; it&rsquo;s knowing which insights are actually worth acting on.
+                <strong>Key learning:</strong> Constraints breed creativity. No frameworks forces a deeper understanding of web fundamentals, and a much lighter page.
               </p>
             </div>
           </article>
