@@ -76,7 +76,7 @@ images/                 Photos, logos, icons (mostly WebP)
 
 ## A note on AI assistance
 
-Large parts of this site were built with the help of Claude. The CSS, the JSON-driven content patterns, the topographic background on the homepage — all came out of long conversations and a lot of iteration. Every line was reviewed and approved by me, and the content (the words, the work history, the personal story) is all mine. But I'm not going to pretend I wrote every closing brace by hand. That feels increasingly dishonest in 2026.
+Large parts of this site were built with the help of Claude. The CSS, the JSON-driven content patterns, and the topographic background on the homepage all came out of long conversations and a lot of iteration. A lot of the writing was drafted or edited with Claude too. The substance is mine: the work history, the projects, the personal story, and the final call on every word. Every line was reviewed and approved by me. But I'm not going to pretend I wrote every sentence or every closing brace by hand. That feels increasingly dishonest in 2026.
 
 ## Contact
 
