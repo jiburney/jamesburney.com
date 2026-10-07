@@ -29,7 +29,7 @@ portfolio, and a way to get in contact.
 
 **Live site:** jamesburney.com
 **Stack:** Vanilla HTML, CSS, JavaScript — no frameworks
-**Hosting:** GitHub Pages (static)
+**Hosting:** Cloudflare Pages (static)
 **Local dev:** `python3 -m http.server 8000` → http://localhost:8000
 
 ---
